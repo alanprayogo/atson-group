@@ -1,0 +1,19 @@
+body {
+    margin-top: 1.2rem;
+}
+
+.navbar i {
+    color: #fff;
+}
+
+.sidebar button {
+    color: #fff;
+}
+
+.content button {
+    color: #000;
+}
+
+.content {
+    margin-left: 14rem;
+}

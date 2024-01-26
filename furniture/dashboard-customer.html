@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <title>AG | Dashboard Customer</title>
+  </head>
+  <body>
+    <!-- hero section -->
+    <section class="hero">
+      <!-- video background -->
+      <video autoplay loop muted plays-inline class="back-video">
+        <source src="../assets/video/hero2.mp4" type="video/mp4" />
+      </video>
+      <!-- video background -->
+      <!-- navbar -->
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-transparent w-100 position-absolute top-0 start-0"
+      >
+        <div class="container">
+          <!-- responsive toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- responsive toggle button -->
+          <div
+            class="collapse navbar-collapse justify-content-between align-items-center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0 fs-6 fw-bold">
+              <!-- home nav -->
+              <li class="nav-item">
+                <a class="nav-link me-2" aria-current="page" href="">HOME</a>
+              </li>
+              <!-- home nav -->
+              <!-- product nav -->
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="">PRODUCT</a>
+              </li>
+              <!-- product nav -->
+              <!-- catalog nav -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href=""
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  CATALOG
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="">Living Chair</a></li>
+                  <li><a class="dropdown-item" href="">Living Table</a></li>
+                  <li><a class="dropdown-item" href="">Dining Table</a></li>
+                  <li><a class="dropdown-item" href="">Dining Chair</a></li>
+                  <li><a class="dropdown-item" href="">Sofa</a></li>
+                  <li><a class="dropdown-item" href="">Bed</a></li>
+                  <li><a class="dropdown-item" href="">Cabinet</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="">Kebaya</a></li>
+                  <li><a class="dropdown-item" href="">Dress</a></li>
+                  <li><a class="dropdown-item" href="">Coat</a></li>
+                  <li><a class="dropdown-item" href="">Custom</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="">Vegetables</a></li>
+                  <li><a class="dropdown-item" href="">Fruits</a></li>
+                  <li><a class="dropdown-item" href="">Medicinal Plants</a></li>
+                  <li><a class="dropdown-item" href="">Mushroom</a></li>
+                </ul>
+              </li>
+              <!-- catalog nav -->
+              <!-- article nav -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >ARTICLE</a
+                >
+              </li>
+              <!-- article nav -->
+              <!-- contact nav -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >CONTACT</a
+                >
+              </li>
+              <!-- contact nav -->
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0 fs-3 fw-bold gap-4">
+              <!-- shopping-cart nav -->
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight"
+                  aria-controls="offcanvasRight"
+                >
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+
+                <div
+                  class="offcanvas offcanvas-end"
+                  tabindex="-1"
+                  id="offcanvasRight"
+                  aria-labelledby="offcanvasRightLabel"
+                >
+                  <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+                    <button
+                      type="button"
+                      class="btn-close text-reset"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="offcanvas-body">...</div>
+                </div>
+              </li>
+              <!-- shopping-cart nav -->
+              <!-- user nav -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href=""
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-solid fa-user"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="profile-customer.html"
+                      >Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../index.html">Sign Out</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- user nav -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar -->
+      <!-- catalog content -->
+      <div class="container w-100 vh-100 py-5">
+        <div class="row mt-5">
+          <!-- living-chair catalog -->
+          <div class="col-3">
+            <a
+              href="#nav-living-chair"
+              class="text-decoration-none text-center"
+            >
+              <div class="card" style="width: 17rem">
+                <img
+                  src="../assets/img/product/furniture/living-chair.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Living Chair</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- living-chair catalog -->
+          <!-- living-table catalog -->
+          <div class="col-3">
+            <a href="" class="text-decoration-none text-center">
+              <div class="card" style="width: 17rem">
+                <img
+                  src="../assets/img/product/furniture/living-table.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Living Table</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- living-table catalog -->
+          <!-- dinning-table catalog -->
+          <div class="col-3">
+            <a href="" class="text-decoration-none text-center">
+              <div class="card" style="width: 17rem">
+                <img
+                  src="../assets/img/product/furniture/dining-table.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Dinning Table</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- dinning-table catalog -->
+          <!-- dinning-chair catalog -->
+          <div class="col-3">
+            <a href="" class="text-decoration-none text-center">
+              <div class="card" style="width: 17rem">
+                <img
+                  src="../assets/img/product/furniture/dinning-chair.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Dinning Chair</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- dinning-chair catalog -->
+        </div>
+        <div class="row mt-4 justify-content-center">
+          <!-- sofa catalog -->
+          <div class="col-3 offset-1">
+            <a href="" class="text-decoration-none text-center">
+              <div class="card" style="width: 17rem">
+                <img
+                  src="../assets/img/product/furniture/sofa.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Sofa</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- sofa catalog -->
+          <!-- bed catalog -->
+          <div class="col-3">
+            <a href="" class="text-decoration-none text-center">
+              <div class="card" style="width: 17rem">
+                <img
+                  src="../assets/img/product/furniture/bed.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Bed</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- bed catalog -->
+          <!-- cabinet catalog -->
+          <div class="col-3">
+            <a href="" class="text-decoration-none text-center">
+              <div class="card" style="width: 17rem">
+                <img
+                  src="../assets/img/product/furniture/cabinet.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cabinet</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- cabinet catalog -->
+        </div>
+      </div>
+      <!-- catalog content -->
+    </section>
+    <!-- hero section -->
+
+    <!-- contact section -->
+    <section class="contact vh-100" id="contact">
+      <div class="container p-5">
+        <!-- content -->
+        <div class="row">
+          <h2 class="text-center">CONTACT</h2>
+        </div>
+        <!-- content -->
+        <div class="row pt-5">
+          <!-- map content -->
+          <div class="col-6 p-3">
+            <iframe
+              class="rounded-3"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.725890345789!2d112.75672132412514!3d-7.272000642735035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbd38ea51a2f%3A0x2640d21feb8c9fd8!2sUniversitas%20Airlangga%20-%20Campus%20B!5e0!3m2!1sen!2sid!4v1705516830534!5m2!1sen!2sid"
+              width="95%"
+              height="90%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <!-- map content -->
+          <!-- feedback content -->
+          <div class="col-6 p-3 d-flex flex-column">
+            <!-- form content -->
+            <form action="">
+              <div class="mb-3 text-center">
+                <h2>Message</h2>
+              </div>
+              <!-- fullname input -->
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="Alan Prayogo"
+                />
+              </div>
+              <!-- fullname input -->
+              <!-- email input -->
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <!-- email input -->
+              <!-- message input -->
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Example textarea</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea2"
+                  rows="3"
+                ></textarea>
+              </div>
+              <!-- message input -->
+            </form>
+            <!-- form content -->
+            <!-- submit button -->
+            <div class="row w-100 justify-content-center">
+              <a href="" class="btn btn-dark fs-6 fw-bold w-25">Submit</a>
+            </div>
+            <!-- submit button -->
+          </div>
+          <!-- feedback content -->
+        </div>
+      </div>
+    </section>
+    <!-- contact section -->
+
+    <!-- footer section -->
+    <section class="footer">
+      <div class="container-fluid bg-dark p-4">
+        <div class="row border-bottom">
+          <!-- contact -->
+          <div class="col-5">
+            <h4 class="text-center">Contact Us</h4>
+            <p><i class="fa-solid fa-phone"></i> 6285791174251</p>
+            <p><i class="fa-solid fa-envelope"></i> atsongroup-cs@gmail.com</p>
+            <!-- medsos -->
+            <div class="row mt-4">
+              <!-- facebook -->
+              <div class="col-2 offset-1">
+                <a href="" class="text-decoration-none"
+                  ><i class="fa-brands fa-square-facebook fa-2xl"></i
+                ></a>
+              </div>
+              <!-- facebook -->
+              <!-- twitter -->
+              <div class="col-2">
+                <a href="" class="text-decoration-none"
+                  ><i class="fa-brands fa-square-x-twitter fa-2xl"></i
+                ></a>
+              </div>
+              <!-- twitter -->
+              <!-- linkedIn -->
+              <div class="col-2">
+                <a href="" class="text-decoration-none"
+                  ><i class="fa-brands fa-linkedin fa-2xl"></i
+                ></a>
+              </div>
+              <!-- linkedIn -->
+              <!-- youtube -->
+              <div class="col-2">
+                <a href="" class="text-decoration-none"
+                  ><i class="fa-brands fa-youtube fa-2xl"></i
+                ></a>
+              </div>
+              <!-- youtube -->
+              <!-- instagram -->
+              <div class="col-2">
+                <a href="" class="text-decoration-none"
+                  ><i class="fa-brands fa-square-instagram fa-2xl"></i
+                ></a>
+              </div>
+              <!-- instagram -->
+            </div>
+            <!-- medsos -->
+          </div>
+          <!-- contact -->
+          <!-- usefull link -->
+          <div class="col-6 border-start">
+            <div class="row justify-content-around">
+              <!-- product link -->
+              <div class="col-6">
+                <h4 class="text-center">Product</h4>
+                <div class="row ps-4">
+                  <div class="col-6">
+                    <ul class="list-unstyled">
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none">Sofa</a>
+                      </li>
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none">Ben</a>
+                      </li>
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none">Living Chair</a>
+                      </li>
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none">Dining Chair</a>
+                      </li>
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none">Living Table</a>
+                      </li>
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none">Dining Table</a>
+                      </li>
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none">Cabninet</a>
+                      </li>
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none"
+                          >Furniture Custom</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <ul class="list-unstyled">
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none">Kebaya</a>
+                      </li>
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none">Dress</a>
+                      </li>
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none">Coat</a>
+                      </li>
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none"
+                          >Fashion Custom</a
+                        >
+                      </li>
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none">Vegetables</a>
+                      </li>
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none">Fruits</a>
+                      </li>
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none"
+                          >Medicinal Plans</a
+                        >
+                      </li>
+                      <li class="m-2">
+                        <a href="" class="text-decoration-none">Mushroom</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- product link -->
+              <!-- about link -->
+              <div class="col-3">
+                <h4 class="text-center">About Us</h4>
+                <ul class="list-unstyled text-center">
+                  <li class="m-2">
+                    <a href="" class="text-decoration-none">Our Company</a>
+                  </li>
+                  <li class="m-2">
+                    <a href="" class="text-decoration-none">Our Factory</a>
+                  </li>
+                  <li class="m-2">
+                    <a href="" class="text-decoration-none">Our Boutique</a>
+                  </li>
+                  <li class="m-2">
+                    <a href="" class="text-decoration-none">Our Garden</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- about link -->
+            </div>
+          </div>
+          <!-- usefull link -->
+        </div>
+        <!-- copyright -->
+        <div class="pt-3">
+          <p>ATSON GROUP © All Rights Reserved.</p>
+        </div>
+        <!-- copyright -->
+      </div>
+    </section>
+    <!-- footer section -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/cb14fdf8d5.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

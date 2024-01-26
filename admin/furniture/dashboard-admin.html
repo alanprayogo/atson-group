@@ -1,0 +1,3277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/dashboard-admin.css" />
+
+    <title>AG | Dashboard Admin</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div
+        class="container-fluid p-2 justify-content-between position-fixed"
+        style="background: #37474f"
+      >
+        <div class="col-1 d-flex align-items-center">
+          <a class="navbar-brand" href="#"><h2>ATSON GROUP</h2></a>
+        </div>
+        <div class="col-2">
+          <ul class="navbar-nav mb-2 me-0">
+            <li class="nav-item ms-4">
+              <a class="nav-link active" aria-current="page" href="#"
+                ><i class="fa-solid fa-cart-shopping fa-xl"></i
+              ></a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" aria-current="page" href="#"
+                ><i class="fa-solid fa-envelope fa-xl"></i
+              ></a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" aria-current="page" href="#"
+                ><i class="fa-solid fa-right-from-bracket fa-xl"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar -->
+
+    <!-- main content -->
+    <div class="sidebar d-flex justify-content-between align-items-start mt-4">
+      <!-- sidebar -->
+      <div
+        class="col-2 nav flex-column nav-pills me-3 fs-6 position-fixed"
+        style="background: #37474f; height: 200rem"
+        id="v-pills-tab"
+        role="tablist"
+        aria-orientation="vertical"
+      >
+        <!-- dashboard button -->
+        <button
+          class="nav-link active text-start py-3"
+          id="v-pills-dashboard-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#v-pills-dashboard"
+          type="button"
+          role="tab"
+          aria-controls="v-pills-dashboard"
+          aria-selected="true"
+        >
+          <i class="fa-solid fa-gauge"></i> Dashboard
+        </button>
+        <!-- dashboard button -->
+        <!-- data button -->
+        <div class="nav-item">
+          <button
+            class="nav-link text-start py-3 w-100"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#dataCollapse"
+            aria-expanded="false"
+            aria-controls="dataCollapse"
+          >
+            <i class="fa-solid fa-database"></i> Data
+          </button>
+          <div class="collapse" id="dataCollapse">
+            <div class="nav flex-column">
+              <!-- admin button -->
+              <button
+                class="nav-link text-start"
+                id="v-pills-admin-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-admin"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-admin"
+                aria-selected="false"
+              >
+                Admin
+              </button>
+              <!-- admin button -->
+              <!-- user button -->
+              <button
+                class="nav-link text-start"
+                id="v-pills-customer-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-user"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-user"
+                aria-selected="false"
+              >
+                User
+              </button>
+              <!-- user button -->
+            </div>
+          </div>
+        </div>
+        <!-- data button -->
+        <!-- master button -->
+        <div class="nav-item">
+          <button
+            class="nav-link text-start py-3 w-100"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#masterCollapse"
+            aria-expanded="false"
+            aria-controls="masterCollapse"
+          >
+            <i class="fa-solid fa-book"></i> Master
+          </button>
+          <div class="collapse" id="masterCollapse">
+            <div class="nav flex-column">
+              <!-- bank button -->
+              <button
+                class="nav-link text-start"
+                id="v-pills-bank-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-bank"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-bank"
+                aria-selected="false"
+              >
+                Bank
+              </button>
+              <!-- bank button -->
+              <!-- wallet button -->
+              <button
+                class="nav-link text-start"
+                id="v-pills-wallet-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-wallet"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-wallet"
+                aria-selected="false"
+              >
+                E-Wallet
+              </button>
+              <!-- wallet button -->
+              <!-- position button -->
+              <button
+                class="nav-link text-start"
+                id="v-pills-position-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-position"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-position"
+                aria-selected="false"
+              >
+                Position Access
+              </button>
+              <!-- position button -->
+              <!-- article button -->
+              <button
+                class="nav-link text-start"
+                id="v-pills-article-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-article"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-article"
+                aria-selected="false"
+              >
+                Article
+              </button>
+              <!-- article button -->
+            </div>
+          </div>
+        </div>
+        <!-- master button -->
+        <!-- category button -->
+        <div class="nav-item">
+          <button
+            class="nav-link text-start py-3 w-100"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#categoryCollapse"
+            aria-expanded="false"
+            aria-controls="categoryCollapse"
+          >
+            <i class="fa-solid fa-list"></i> Category
+          </button>
+          <div class="collapse" id="categoryCollapse">
+            <div class="nav flex-column">
+              <!-- category button -->
+              <button
+                class="nav-link text-start"
+                id="v-pills-category-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-category"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-category"
+                aria-selected="false"
+              >
+                Category Product
+              </button>
+              <!-- category button -->
+              <!-- sub-category button -->
+              <button
+                class="nav-link text-start"
+                id="v-pills-sub-category-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-sub-category"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-sub-category"
+                aria-selected="false"
+              >
+                Sub Category
+              </button>
+              <!-- sub-category button -->
+              <!-- size-color button -->
+              <button
+                class="nav-link text-start"
+                id="v-pills-size-color-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-size-color"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-size-color"
+                aria-selected="false"
+              >
+                Size & Color
+              </button>
+              <!-- size-color button -->
+            </div>
+          </div>
+        </div>
+        <!-- category button -->
+        <!-- stok button -->
+        <div class="nav-item">
+          <button
+            class="nav-link text-start py-3 w-100"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#stokCollapse"
+            aria-expanded="false"
+            aria-controls="stokCollapse"
+          >
+            <i class="fa-solid fa-boxes-stacked"></i> Stok
+          </button>
+          <div class="collapse" id="stokCollapse">
+            <div class="nav flex-column">
+              <!-- product button -->
+              <button
+                class="nav-link text-start"
+                id="v-pills-product-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-product"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-product"
+                aria-selected="false"
+              >
+                Product
+              </button>
+              <!-- product button -->
+              <!-- opname button -->
+              <button
+                class="nav-link text-start"
+                id="v-pills-opname-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-opname"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-opname"
+                aria-selected="false"
+              >
+                Opname
+              </button>
+              <!-- opname button -->
+              <!-- history-opname button -->
+              <button
+                class="nav-link text-start"
+                id="v-pills-history-opname-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-history-opname"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-history-opname"
+                aria-selected="false"
+              >
+                History Opname
+              </button>
+              <!-- history-opname button -->
+            </div>
+          </div>
+        </div>
+        <!-- stok button -->
+        <!-- transaction button -->
+        <div class="nav-item">
+          <button
+            class="nav-link text-start py-3 w-100"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#transactionCollapse"
+            aria-expanded="false"
+            aria-controls="transactionCollapse"
+          >
+            <i class="fa-solid fa-coins"></i> Transaction
+          </button>
+          <div class="collapse" id="transactionCollapse">
+            <div class="nav flex-column">
+              <!-- transaction button -->
+              <button
+                class="nav-link text-start"
+                id="v-pills-transaction-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-transaction"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-transaction"
+                aria-selected="false"
+              >
+                History Transaction
+              </button>
+              <!-- transaction button -->
+              <!-- feedback button -->
+              <button
+                class="nav-link text-start"
+                id="v-pills-feedback-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-feedback"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-feedback"
+                aria-selected="false"
+              >
+                Feedback
+              </button>
+              <!-- feedback button -->
+            </div>
+          </div>
+        </div>
+        <!-- transaction button -->
+        <!-- settings button -->
+        <button
+          class="nav-link text-start py-3"
+          id="v-pills-settings-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#v-pills-settings"
+          type="button"
+          role="tab"
+          aria-controls="v-pills-settings"
+          aria-selected="false"
+        >
+          <i class="fa-solid fa-gear"></i> Settings
+        </button>
+        <!-- settings button -->
+      </div>
+      <!-- footer -->
+      <div class="footer position-fixed bottom-0 ms-4">
+        <p class="small fw-bold text-center ms-3" style="color: #fff">
+          ATSON GROUP <br />
+          © All Rights Reserved.
+        </p>
+      </div>
+      <!-- footer -->
+      <!-- sidebar -->
+
+      <!-- content -->
+      <div class="content col-10 tab-content" id="v-pills-tabContent">
+        <!-- dashboard content -->
+        <div
+          class="tab-pane fade show active"
+          id="v-pills-dashboard"
+          role="tabpanel"
+          aria-labelledby="v-pills-dashboard-tab"
+        >
+          <div class="container-fluid">
+            <!-- about tabs -->
+            <nav class="container position-relative mt-5">
+              <div
+                class="nav nav-tabs position-absolute top-0 start-50 translate-middle w-100"
+                id="nav-tab"
+                role="tablist"
+              >
+                <!-- daiily tabs button -->
+                <button
+                  class="nav-link active"
+                  id="nav-daily-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-daily"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-daily"
+                  aria-selected="true"
+                >
+                  Daily
+                </button>
+                <!-- daily tabs button -->
+                <!-- weekly tabs button -->
+                <button
+                  class="nav-link"
+                  id="nav-weekly-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-weekly"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-weekly"
+                  aria-selected="false"
+                >
+                  Weekly
+                </button>
+                <!-- weekly tabs button -->
+                <!-- monthly tabs button -->
+                <button
+                  class="nav-link"
+                  id="nav-monthly-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-monthly"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-monthly"
+                  aria-selected="false"
+                >
+                  Monthly
+                </button>
+                <!-- monthly tabs button -->
+                <!-- annually tabs button -->
+                <button
+                  class="nav-link"
+                  id="nav-annually-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-annually"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-annually"
+                  aria-selected="false"
+                >
+                  Annually
+                </button>
+                <!-- annually tabs button -->
+              </div>
+            </nav>
+            <!-- about tabs -->
+            <!-- static detail -->
+            <div class="row justify-content-around">
+              <div
+                class="col-3 p-3 rounded g-5"
+                style="width: 20rem; background: #407bff"
+              >
+                <div class="row align-items-center">
+                  <div class="col-10">
+                    <p class="fs-6">
+                      WELLCOME <br />
+                      <span class="fs-4 fw-bold">Loid Forger</span>
+                    </p>
+                  </div>
+                  <div class="col-2">
+                    <i class="fa-solid fa-check fa-xl"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-3 p-3 rounded g-5"
+                style="width: 20rem; background: #407bff"
+              >
+                <div class="row align-items-center">
+                  <div class="col-10">
+                    <p class="fs-6">
+                      TOTAL USER <br />
+                      <span class="fs-4 fw-bold">1058</span>
+                    </p>
+                  </div>
+                  <div class="col-2">
+                    <i class="fa-solid fa-user fa-xl"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-3 p-3 rounded g-5"
+                style="width: 20rem; background: #407bff"
+              >
+                <div class="row align-items-center">
+                  <div class="col-10">
+                    <p class="fs-6">
+                      TOTAL PRODUK <br />
+                      <span class="fs-4 fw-bold">384</span>
+                    </p>
+                  </div>
+                  <div class="col-2">
+                    <i class="fa-solid fa-boxes-stacked fa-xl"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- static detail -->
+            <!-- dynamic detail -->
+            <div class="tab-content" id="nav-tabContent">
+              <!-- daily detail -->
+              <div
+                class="tab-pane fade show active"
+                id="nav-daily"
+                role="tabpanel"
+                aria-labelledby="nav-daily-tab"
+              >
+                <div class="row justify-content-around">
+                  <div
+                    class="col-3 p-3 rounded g-3"
+                    style="width: 20rem; background: #407bff"
+                  >
+                    <div class="row align-items-center">
+                      <div class="col-10">
+                        <p class="fs-6">
+                          VIEW <br />
+                          <span class="fs-4 fw-bold">2167</span>
+                        </p>
+                      </div>
+                      <div class="col-2">
+                        <i class="fa-solid fa-eye fa-xl"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-3 p-3 rounded g-3"
+                    style="width: 20rem; background: #407bff"
+                  >
+                    <div class="row align-items-center">
+                      <div class="col-10">
+                        <p class="fs-6">
+                          TRANSACTION <br />
+                          <span class="fs-4 fw-bold">176</span>
+                        </p>
+                      </div>
+                      <div class="col-2">
+                        <i class="fa-solid fa-handshake fa-xl"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-3 p-3 rounded g-3"
+                    style="width: 20rem; background: #407bff"
+                  >
+                    <div class="row align-items-center">
+                      <div class="col-10">
+                        <p class="fs-6">
+                          FEEDBACK <br />
+                          <span class="fs-4 fw-bold">84</span>
+                        </p>
+                      </div>
+                      <div class="col-2">
+                        <i class="fa-solid fa-comment fa-xl"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- daily-income -->
+                <div class="container mt-4">
+                  <h4 class="fw-bold">INCOME</h4>
+                  <div class="row justify-content-between">
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              TODAY <br />
+                              <span class="fs-4 fw-bold">Rp. 504.000.000</span>
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bills fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              YESTERDAY <br />
+                              <span class="fs-4 fw-bold">Rp. 704.000.000</span>
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bills fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- daily-income -->
+                <!-- daily-expense -->
+                <div class="container mt-2">
+                  <h4 class="fw-bold">EXPENSE</h4>
+                  <div class="row justify-content-between">
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              TODAY <br />
+                              <span class="fs-4 fw-bold">Rp. 254.000.000</span>
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bill-wheat fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              YESTERDAY <br />
+                              <span class="fs-4 fw-bold">Rp. 470.000.000</span>
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bill-wheat fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- daily-expense -->
+                <!-- product-detail -->
+
+                <!-- product-detail -->
+              </div>
+              <!-- daily detail -->
+              <!-- weekly detail -->
+              <div
+                class="tab-pane fade show active"
+                id="nav-weekly"
+                role="tabpanel"
+                aria-labelledby="nav-weekly-tab"
+              >
+                <div class="row justify-content-around">
+                  <div
+                    class="col-3 p-3 rounded g-3"
+                    style="width: 20rem; background: #407bff"
+                  >
+                    <div class="row align-items-center">
+                      <div class="col-10">
+                        <p class="fs-6">
+                          VIEW <br />
+                          <span class="fs-4 fw-bold">12167</span>
+                        </p>
+                      </div>
+                      <div class="col-2">
+                        <i class="fa-solid fa-eye fa-xl"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-3 p-3 rounded g-3"
+                    style="width: 20rem; background: #407bff"
+                  >
+                    <div class="row align-items-center">
+                      <div class="col-10">
+                        <p class="fs-6">
+                          TRANSACTION <br />
+                          <span class="fs-4 fw-bold">1176</span>
+                        </p>
+                      </div>
+                      <div class="col-2">
+                        <i class="fa-solid fa-handshake fa-xl"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-3 p-3 rounded g-3"
+                    style="width: 20rem; background: #407bff"
+                  >
+                    <div class="row align-items-center">
+                      <div class="col-10">
+                        <p class="fs-6">
+                          FEEDBACK <br />
+                          <span class="fs-4 fw-bold">184</span>
+                        </p>
+                      </div>
+                      <div class="col-2">
+                        <i class="fa-solid fa-comment fa-xl"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- weekly-income -->
+                <div class="container mt-4">
+                  <h4 class="fw-bold">INCOME</h4>
+                  <div class="row justify-content-between">
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              THIS WEEK <br />
+                              <span class="fs-4 fw-bold"
+                                >Rp. 35.504.000.000</span
+                              >
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bills fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              LAST WEEK <br />
+                              <span class="fs-4 fw-bold"
+                                >Rp. 49.704.000.000</span
+                              >
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bills fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- weekly-income -->
+                <!-- weekly-expense -->
+                <div class="container mt-2">
+                  <h4 class="fw-bold">EXPENSE</h4>
+                  <div class="row justify-content-between">
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              THIS WEEK <br />
+                              <span class="fs-4 fw-bold"
+                                >Rp. 14.254.000.000</span
+                              >
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bill-wheat fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              LAST WEEK <br />
+                              <span class="fs-4 fw-bold"
+                                >Rp. 28.470.000.000</span
+                              >
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bill-wheat fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- weekly-expense -->
+              </div>
+              <!-- weekly detail -->
+              <!-- monthly detail -->
+              <div
+                class="tab-pane fade show active"
+                id="nav-monthly"
+                role="tabpanel"
+                aria-labelledby="nav-monthly-tab"
+              >
+                <div class="row justify-content-around">
+                  <div
+                    class="col-3 p-3 rounded g-3"
+                    style="width: 20rem; background: #407bff"
+                  >
+                    <div class="row align-items-center">
+                      <div class="col-10">
+                        <p class="fs-6">
+                          VIEW <br />
+                          <span class="fs-4 fw-bold">3121670</span>
+                        </p>
+                      </div>
+                      <div class="col-2">
+                        <i class="fa-solid fa-eye fa-xl"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-3 p-3 rounded g-3"
+                    style="width: 20rem; background: #407bff"
+                  >
+                    <div class="row align-items-center">
+                      <div class="col-10">
+                        <p class="fs-6">
+                          TRANSACTION <br />
+                          <span class="fs-4 fw-bold">311760</span>
+                        </p>
+                      </div>
+                      <div class="col-2">
+                        <i class="fa-solid fa-handshake fa-xl"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-3 p-3 rounded g-3"
+                    style="width: 20rem; background: #407bff"
+                  >
+                    <div class="row align-items-center">
+                      <div class="col-10">
+                        <p class="fs-6">
+                          FEEDBACK <br />
+                          <span class="fs-4 fw-bold">31840</span>
+                        </p>
+                      </div>
+                      <div class="col-2">
+                        <i class="fa-solid fa-comment fa-xl"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- monthly-income -->
+                <div class="container mt-4">
+                  <h4 class="fw-bold">INCOME</h4>
+                  <div class="row justify-content-between">
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              THIS MONTH <br />
+                              <span class="fs-4 fw-bold"
+                                >Rp. 150.504.000.000</span
+                              >
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bills fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              LAST MONTH <br />
+                              <span class="fs-4 fw-bold"
+                                >Rp. 210.704.000.000</span
+                              >
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bills fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- monthly-income -->
+                <!-- monthly-expense -->
+                <div class="container mt-2">
+                  <h4 class="fw-bold">EXPENSE</h4>
+                  <div class="row justify-content-between">
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              THIS MONTH <br />
+                              <span class="fs-4 fw-bold"
+                                >Rp. 60.254.000.000</span
+                              >
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bill-wheat fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              LAST MONTH <br />
+                              <span class="fs-4 fw-bold"
+                                >Rp. 120.470.000.000</span
+                              >
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bill-wheat fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- monthly-expense -->
+              </div>
+              <!-- monthly detail -->
+              <!-- annually detail -->
+              <div
+                class="tab-pane fade show active"
+                id="nav-annually"
+                role="tabpanel"
+                aria-labelledby="nav-annually-tab"
+              >
+                <div class="row justify-content-around">
+                  <div
+                    class="col-3 p-3 rounded g-3"
+                    style="width: 20rem; background: #407bff"
+                  >
+                    <div class="row align-items-center">
+                      <div class="col-10">
+                        <p class="fs-6">
+                          VIEW <br />
+                          <span class="fs-4 fw-bold">131216702</span>
+                        </p>
+                      </div>
+                      <div class="col-2">
+                        <i class="fa-solid fa-eye fa-xl"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-3 p-3 rounded g-3"
+                    style="width: 20rem; background: #407bff"
+                  >
+                    <div class="row align-items-center">
+                      <div class="col-10">
+                        <p class="fs-6">
+                          TRANSACTION <br />
+                          <span class="fs-4 fw-bold">13117604</span>
+                        </p>
+                      </div>
+                      <div class="col-2">
+                        <i class="fa-solid fa-handshake fa-xl"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-3 p-3 rounded g-3"
+                    style="width: 20rem; background: #407bff"
+                  >
+                    <div class="row align-items-center">
+                      <div class="col-10">
+                        <p class="fs-6">
+                          FEEDBACK <br />
+                          <span class="fs-4 fw-bold">1318406</span>
+                        </p>
+                      </div>
+                      <div class="col-2">
+                        <i class="fa-solid fa-comment fa-xl"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- annually-income -->
+                <div class="container mt-4">
+                  <h4 class="fw-bold">INCOME</h4>
+                  <div class="row justify-content-between">
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              THIS YEAR <br />
+                              <span class="fs-4 fw-bold"
+                                >Rp. 90.150.504.000.000</span
+                              >
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bills fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              LAST YEAR <br />
+                              <span class="fs-4 fw-bold"
+                                >Rp. 24.210.704.000.000</span
+                              >
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bills fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- annually-income -->
+                <!-- annually-expense -->
+                <div class="container mt-2">
+                  <h4 class="fw-bold">EXPENSE</h4>
+                  <div class="row justify-content-between">
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              THIS YEAR <br />
+                              <span class="fs-4 fw-bold"
+                                >Rp. 7.260.254.000.000</span
+                              >
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bill-wheat fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div
+                        class="p-3 rounded g-3"
+                        style="width: 33rem; background: #407bff"
+                      >
+                        <div class="row align-items-center">
+                          <div class="col-10">
+                            <p class="fs-6">
+                              LAST YEAR <br />
+                              <span class="fs-4 fw-bold"
+                                >Rp. 12.120.470.000.000</span
+                              >
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <i class="fa-solid fa-money-bill-wheat fa-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- annually-expense -->
+              </div>
+              <!-- annually detail -->
+            </div>
+            <!-- dynamic detail -->
+            <!-- product detail -->
+            <div class="container mt-4">
+              <div class="row">
+                <div class="col-6">
+                  <h4>Best selling products</h4>
+                  <table class="table table-bordered table-hover">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Sold</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Living Chair 2</td>
+                        <td>24</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Sofa 4</td>
+                        <td>18</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-6">
+                  <h4>Out of stock</h4>
+                  <table class="table table-bordered table-hover">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Stok</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Living Chair 2</td>
+                        <td>2</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Sofa 4</td>
+                        <td>1</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- product detail -->
+          </div>
+        </div>
+        <!-- dashboard content -->
+        <!-- admin content -->
+        <div
+          class="tab-pane fade"
+          id="v-pills-admin"
+          role="tabpanel"
+          aria-labelledby="v-pills-admin-tab"
+        >
+          <div class="container-fluid">
+            <div class="container mt-3 border shadow">
+              <div
+                class="row d-flex justify-content-between align-items-center bg-dark rounded-top p-2"
+                style="color: #fff"
+              >
+                <div class="col-2">
+                  <h4>Admin</h4>
+                </div>
+                <div class="col-1">
+                  <a class="text-decoration-none" href=""
+                    ><i class="fa-solid fa-plus"></i> Add</a
+                  >
+                </div>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-2 d-flex align-items-center">
+                  <label for="">show</label>
+                  <select
+                    class="form-select mx-2"
+                    aria-label="Default select example"
+                  >
+                    <option selected>10</option>
+                    <option value="1">25</option>
+                    <option value="2">50</option>
+                    <option value="3">100</option>
+                  </select>
+                  <label for="">entities</label>
+                </div>
+                <div class="col-4">
+                  <form class="d-flex">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="row px-3">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Fullname</th>
+                      <th scope="col">Username</th>
+                      <th scope="col">Akses</th>
+                      <th scope="col">Date</th>
+                      <th class="float-end" scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Loid Forger</td>
+                      <td>loid</td>
+                      <td>Furniture Manager</td>
+                      <td>24 Januari 2023</td>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-danger">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-6">
+                  <label for="">showing 1 to 1 of 1 entries</label>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a
+                          class="page-link"
+                          href="#"
+                          tabindex="-1"
+                          aria-disabled="true"
+                          >Previous</a
+                        >
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- admin content -->
+        <!-- user content -->
+        <div
+          class="tab-pane fade"
+          id="v-pills-user"
+          role="tabpanel"
+          aria-labelledby="v-pills-user-tab"
+        >
+          <div class="container-fluid">
+            <div class="container mt-3 border shadow">
+              <div
+                class="row d-flex justify-content-between align-items-center bg-dark rounded-top p-2"
+                style="color: #fff"
+              >
+                <div class="col-2">
+                  <h4>User</h4>
+                </div>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-2 d-flex align-items-center">
+                  <label for="">show</label>
+                  <select
+                    class="form-select mx-2"
+                    aria-label="Default select example"
+                  >
+                    <option selected>10</option>
+                    <option value="1">25</option>
+                    <option value="2">50</option>
+                    <option value="3">100</option>
+                  </select>
+                  <label for="">entities</label>
+                </div>
+                <div class="col-4">
+                  <form class="d-flex">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="row px-3">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Fullname</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Status</th>
+                      <th class="float-end" scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Yor Forger</td>
+                      <td>yorforger@gmail.com</td>
+                      <td><span class="badge bg-success">active</span></td>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-info">
+                          <i class="fa-solid fa-eye"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-6">
+                  <label for="">showing 1 to 1 of 1 entries</label>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a
+                          class="page-link"
+                          href="#"
+                          tabindex="-1"
+                          aria-disabled="true"
+                          >Previous</a
+                        >
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- user content -->
+        <!-- bank content -->
+        <div
+          class="tab-pane fade"
+          id="v-pills-bank"
+          role="tabpanel"
+          aria-labelledby="v-pills-bank-tab"
+        >
+          <div class="container-fluid">
+            <div class="container mt-3 border shadow">
+              <div
+                class="row d-flex justify-content-between align-items-center bg-dark rounded-top p-2"
+                style="color: #fff"
+              >
+                <div class="col-2">
+                  <h4>Bank</h4>
+                </div>
+                <div class="col-1">
+                  <a class="text-decoration-none" href=""
+                    ><i class="fa-solid fa-plus"></i> Add</a
+                  >
+                </div>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-2 d-flex align-items-center">
+                  <label for="">show</label>
+                  <select
+                    class="form-select mx-2"
+                    aria-label="Default select example"
+                  >
+                    <option selected>10</option>
+                    <option value="1">25</option>
+                    <option value="2">50</option>
+                    <option value="3">100</option>
+                  </select>
+                  <label for="">entities</label>
+                </div>
+                <div class="col-4">
+                  <form class="d-flex">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="row px-3">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Bank</th>
+                      <th scope="col">Rekening Name</th>
+                      <th scope="col">Rekening Number</th>
+                      <th scope="col">Status</th>
+                      <th class="float-end" scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">BCA</th>
+                      <td>Yor Forger</td>
+                      <td>135792468</td>
+                      <td><span class="badge bg-success">active</span></td>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-danger">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-6">
+                  <label for="">showing 1 to 1 of 1 entries</label>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a
+                          class="page-link"
+                          href="#"
+                          tabindex="-1"
+                          aria-disabled="true"
+                          >Previous</a
+                        >
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- bank content -->
+        <!-- wallet content -->
+        <div
+          class="tab-pane fade"
+          id="v-pills-wallet"
+          role="tabpanel"
+          aria-labelledby="v-pills-wallet-tab"
+        >
+          <div class="container-fluid">
+            <div class="container mt-3 border shadow">
+              <div
+                class="row d-flex justify-content-between align-items-center bg-dark rounded-top p-2"
+                style="color: #fff"
+              >
+                <div class="col-2">
+                  <h4>e-Wallet</h4>
+                </div>
+                <div class="col-1">
+                  <a class="text-decoration-none" href=""
+                    ><i class="fa-solid fa-plus"></i> Add</a
+                  >
+                </div>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-2 d-flex align-items-center">
+                  <label for="">show</label>
+                  <select
+                    class="form-select mx-2"
+                    aria-label="Default select example"
+                  >
+                    <option selected>10</option>
+                    <option value="1">25</option>
+                    <option value="2">50</option>
+                    <option value="3">100</option>
+                  </select>
+                  <label for="">entities</label>
+                </div>
+                <div class="col-4">
+                  <form class="d-flex">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="row px-3">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Bank</th>
+                      <th scope="col">Rekening Name</th>
+                      <th scope="col">Rekening Number</th>
+                      <th scope="col">Status</th>
+                      <th class="float-end" scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">DANA</th>
+                      <td>Yor Forger</td>
+                      <td>309108135792468</td>
+                      <td><span class="badge bg-success">active</span></td>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-danger">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-6">
+                  <label for="">showing 1 to 1 of 1 entries</label>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a
+                          class="page-link"
+                          href="#"
+                          tabindex="-1"
+                          aria-disabled="true"
+                          >Previous</a
+                        >
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- wallet content -->
+        <!-- position content -->
+        <div
+          class="tab-pane fade"
+          id="v-pills-position"
+          role="tabpanel"
+          aria-labelledby="v-pills-position-tab"
+        >
+          <div class="container-fluid">
+            <div class="container mt-3 border shadow">
+              <div
+                class="row d-flex justify-content-between align-items-center bg-dark rounded-top p-2"
+                style="color: #fff"
+              >
+                <div class="col-3">
+                  <h4>Position Access</h4>
+                </div>
+                <div class="col-1">
+                  <a class="text-decoration-none" href=""
+                    ><i class="fa-solid fa-plus"></i> Add</a
+                  >
+                </div>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-2 d-flex align-items-center">
+                  <label for="">show</label>
+                  <select
+                    class="form-select mx-2"
+                    aria-label="Default select example"
+                  >
+                    <option selected>10</option>
+                    <option value="1">25</option>
+                    <option value="2">50</option>
+                    <option value="3">100</option>
+                  </select>
+                  <label for="">entities</label>
+                </div>
+                <div class="col-4">
+                  <form class="d-flex">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="row px-3">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Access Name</th>
+                      <th class="float-end" scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <th scope="row">Furniture Manager</th>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-danger">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-6">
+                  <label for="">showing 1 to 1 of 1 entries</label>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a
+                          class="page-link"
+                          href="#"
+                          tabindex="-1"
+                          aria-disabled="true"
+                          >Previous</a
+                        >
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- position content -->
+        <!-- article content -->
+        <div
+          class="tab-pane fade"
+          id="v-pills-article"
+          role="tabpanel"
+          aria-labelledby="v-pills-article-tab"
+        >
+          <div class="container-fluid">
+            <div class="container mt-3 border shadow">
+              <div
+                class="row d-flex justify-content-between align-items-center bg-dark rounded-top p-2"
+                style="color: #fff"
+              >
+                <div class="col-2">
+                  <h4>Article</h4>
+                </div>
+                <div class="col-1">
+                  <a class="text-decoration-none" href=""
+                    ><i class="fa-solid fa-plus"></i> Add</a
+                  >
+                </div>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-2 d-flex align-items-center">
+                  <label for="">show</label>
+                  <select
+                    class="form-select mx-2"
+                    aria-label="Default select example"
+                  >
+                    <option selected>10</option>
+                    <option value="1">25</option>
+                    <option value="2">50</option>
+                    <option value="3">100</option>
+                  </select>
+                  <label for="">entities</label>
+                </div>
+                <div class="col-4">
+                  <form class="d-flex">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="row px-3">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Article Image</th>
+                      <th scope="col">Article Category</th>
+                      <th scope="col">Status</th>
+                      <th class="float-end" scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>
+                        <img
+                          style="width: 8rem"
+                          src="../../assets/img/article/company/company-news1.jpg"
+                          alt=""
+                        />
+                      </td>
+                      <td>company-news</td>
+                      <td><span class="badge bg-success">active</span></td>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-danger">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-6">
+                  <label for="">showing 1 to 1 of 1 entries</label>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a
+                          class="page-link"
+                          href="#"
+                          tabindex="-1"
+                          aria-disabled="true"
+                          >Previous</a
+                        >
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- article content -->
+        <!-- category content -->
+        <div
+          class="tab-pane fade"
+          id="v-pills-category"
+          role="tabpanel"
+          aria-labelledby="v-pills-category-tab"
+        >
+          <div class="container-fluid">
+            <div class="container mt-3 border shadow">
+              <div
+                class="row d-flex justify-content-between align-items-center bg-dark rounded-top p-2"
+                style="color: #fff"
+              >
+                <div class="col-2">
+                  <h4>Category</h4>
+                </div>
+                <div class="col-1">
+                  <a class="text-decoration-none" href=""
+                    ><i class="fa-solid fa-plus"></i> Add</a
+                  >
+                </div>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-2 d-flex align-items-center">
+                  <label for="">show</label>
+                  <select
+                    class="form-select mx-2"
+                    aria-label="Default select example"
+                  >
+                    <option selected>10</option>
+                    <option value="1">25</option>
+                    <option value="2">50</option>
+                    <option value="3">100</option>
+                  </select>
+                  <label for="">entities</label>
+                </div>
+                <div class="col-4">
+                  <form class="d-flex">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="row px-3">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Category Name</th>
+                      <th scope="col">Sub Category</th>
+                      <th scope="col">Status</th>
+                      <th class="float-end" scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Chair</td>
+                      <td>
+                        Living Chair <br />
+                        Dinning Chair
+                      </td>
+                      <td><span class="badge bg-success">active</span></td>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-danger">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-6">
+                  <label for="">showing 1 to 1 of 1 entries</label>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a
+                          class="page-link"
+                          href="#"
+                          tabindex="-1"
+                          aria-disabled="true"
+                          >Previous</a
+                        >
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- category content -->
+        <!-- sub-category content -->
+        <div
+          class="tab-pane fade"
+          id="v-pills-sub-category"
+          role="tabpanel"
+          aria-labelledby="v-pills-sub-category-tab"
+        >
+          <div class="container-fluid">
+            <div class="container mt-3 border shadow">
+              <div
+                class="row d-flex justify-content-between align-items-center bg-dark rounded-top p-2"
+                style="color: #fff"
+              >
+                <div class="col-2">
+                  <h4>Sub Category</h4>
+                </div>
+                <div class="col-1">
+                  <a class="text-decoration-none" href=""
+                    ><i class="fa-solid fa-plus"></i> Add</a
+                  >
+                </div>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-2 d-flex align-items-center">
+                  <label for="">show</label>
+                  <select
+                    class="form-select mx-2"
+                    aria-label="Default select example"
+                  >
+                    <option selected>10</option>
+                    <option value="1">25</option>
+                    <option value="2">50</option>
+                    <option value="3">100</option>
+                  </select>
+                  <label for="">entities</label>
+                </div>
+                <div class="col-4">
+                  <form class="d-flex">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="row px-3">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Sub Category</th>
+                      <th scope="col">Images</th>
+                      <th scope="col">Status</th>
+                      <th class="float-end" scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Living Chair</td>
+                      <td>
+                        <img
+                          style="width: 8rem"
+                          src="../../assets/img/product/furniture/living-chair.jpg"
+                          alt=""
+                        />
+                      </td>
+                      <td><span class="badge bg-success">active</span></td>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-danger">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-6">
+                  <label for="">showing 1 to 1 of 1 entries</label>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a
+                          class="page-link"
+                          href="#"
+                          tabindex="-1"
+                          aria-disabled="true"
+                          >Previous</a
+                        >
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sub-category content -->
+        <!-- size-color content -->
+        <div
+          class="tab-pane fade"
+          id="v-pills-size-color"
+          role="tabpanel"
+          aria-labelledby="v-pills-size-color-tab"
+        >
+          <div class="container-fluid">
+            <div class="container mt-3 border shadow">
+              <div
+                class="row d-flex justify-content-between align-items-center bg-dark rounded-top p-2"
+                style="color: #fff"
+              >
+                <div class="col-2">
+                  <h4>Size</h4>
+                </div>
+                <div class="col-1">
+                  <a class="text-decoration-none" href=""
+                    ><i class="fa-solid fa-plus"></i> Add</a
+                  >
+                </div>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-2 d-flex align-items-center">
+                  <label for="">show</label>
+                  <select
+                    class="form-select mx-2"
+                    aria-label="Default select example"
+                  >
+                    <option selected>10</option>
+                    <option value="1">25</option>
+                    <option value="2">50</option>
+                    <option value="3">100</option>
+                  </select>
+                  <label for="">entities</label>
+                </div>
+                <div class="col-4">
+                  <form class="d-flex">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="row px-3">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Size</th>
+                      <th scope="col">Detail</th>
+                      <th scope="col">Status</th>
+                      <th class="float-end" scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>S</td>
+                      <td>1m x 1m</td>
+                      <td><span class="badge bg-success">active</span></td>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-danger">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>M</td>
+                      <td>2m x 2m</td>
+                      <td><span class="badge bg-success">active</span></td>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-danger">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-6">
+                  <label for="">showing 1 to 1 of 1 entries</label>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a
+                          class="page-link"
+                          href="#"
+                          tabindex="-1"
+                          aria-disabled="true"
+                          >Previous</a
+                        >
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="container mt-3 border shadow">
+              <div
+                class="row d-flex justify-content-between align-items-center bg-dark rounded-top p-2"
+                style="color: #fff"
+              >
+                <div class="col-2">
+                  <h4>Color</h4>
+                </div>
+                <div class="col-1">
+                  <a class="text-decoration-none" href=""
+                    ><i class="fa-solid fa-plus"></i> Add</a
+                  >
+                </div>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-2 d-flex align-items-center">
+                  <label for="">show</label>
+                  <select
+                    class="form-select mx-2"
+                    aria-label="Default select example"
+                  >
+                    <option selected>10</option>
+                    <option value="1">25</option>
+                    <option value="2">50</option>
+                    <option value="3">100</option>
+                  </select>
+                  <label for="">entities</label>
+                </div>
+                <div class="col-4">
+                  <form class="d-flex">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="row px-3">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Color</th>
+                      <th scope="col">Detail</th>
+                      <th scope="col">Status</th>
+                      <th class="float-end" scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Varian 1</td>
+                      <td>Grey</td>
+                      <td><span class="badge bg-success">active</span></td>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-danger">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Varian 2</td>
+                      <td>Crem</td>
+                      <td><span class="badge bg-success">active</span></td>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-danger">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-6">
+                  <label for="">showing 1 to 1 of 1 entries</label>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a
+                          class="page-link"
+                          href="#"
+                          tabindex="-1"
+                          aria-disabled="true"
+                          >Previous</a
+                        >
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- size-color content -->
+        <!-- product content -->
+        <div
+          class="tab-pane fade"
+          id="v-pills-product"
+          role="tabpanel"
+          aria-labelledby="v-pills-product-tab"
+        >
+          <div class="container-fluid">
+            <div class="container mt-3 border shadow">
+              <div
+                class="row d-flex justify-content-between align-items-center bg-dark rounded-top p-2"
+                style="color: #fff"
+              >
+                <div class="col-2">
+                  <h4>Product</h4>
+                </div>
+                <div class="col-1">
+                  <a class="text-decoration-none" href=""
+                    ><i class="fa-solid fa-plus"></i> Add</a
+                  >
+                </div>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-2 d-flex align-items-center">
+                  <label for="">show</label>
+                  <select
+                    class="form-select mx-2"
+                    aria-label="Default select example"
+                  >
+                    <option selected>10</option>
+                    <option value="1">25</option>
+                    <option value="2">50</option>
+                    <option value="3">100</option>
+                  </select>
+                  <label for="">entities</label>
+                </div>
+                <div class="col-4">
+                  <form class="d-flex">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="row px-3">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Product Name</th>
+                      <th scope="col">Stok</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Status</th>
+                      <th class="float-end" scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Living Chair 1</td>
+                      <td>
+                        S, M, L, XL <br />
+                        Varian 1, Varian 2, <br />
+                        Varian 3, Varian 4
+                      </td>
+                      <td>Rp. 4.599.999,-</td>
+                      <td><span class="badge bg-success">active</span></td>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-danger">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-6">
+                  <label for="">showing 1 to 1 of 1 entries</label>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a
+                          class="page-link"
+                          href="#"
+                          tabindex="-1"
+                          aria-disabled="true"
+                          >Previous</a
+                        >
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- product content -->
+        <!-- opname content -->
+        <div
+          class="tab-pane fade"
+          id="v-pills-opname"
+          role="tabpanel"
+          aria-labelledby="v-pills-opname-tab"
+        >
+          <div class="container-fluid">
+            <div class="container mt-3 border shadow">
+              <div
+                class="row d-flex justify-content-between align-items-center bg-dark rounded-top p-2"
+                style="color: #fff"
+              >
+                <div class="col-2">
+                  <h4>Opname</h4>
+                </div>
+                <div class="col-1">
+                  <a class="text-decoration-none" href=""
+                    ><i class="fa-solid fa-check"></i> Save</a
+                  >
+                </div>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-2 d-flex align-items-center">
+                  <label for="">show</label>
+                  <select
+                    class="form-select mx-2"
+                    aria-label="Default select example"
+                  >
+                    <option selected>10</option>
+                    <option value="1">25</option>
+                    <option value="2">50</option>
+                    <option value="3">100</option>
+                  </select>
+                  <label for="">entities</label>
+                </div>
+                <div class="col-4">
+                  <form class="d-flex">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="row px-3">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Product Name</th>
+                      <th scope="col">Size</th>
+                      <th scope="col">Color</th>
+                      <th scope="col">Add Stok</th>
+                      <th scope="col">Information</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Living Chair 1</th>
+                      <td class="d-flex">
+                        <select
+                          class="form-select me-2"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Open this select size</option>
+                          <option value="1">S</option>
+                          <option value="2">M</option>
+                          <option value="3">L</option>
+                          <option value="3">XL</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Open this select color</option>
+                          <option value="1">Varian 1</option>
+                          <option value="2">Varian 2</option>
+                          <option value="3">Varian 3</option>
+                          <option value="3">Varian 4</option>
+                        </select>
+                      </td>
+                      <td>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                        />
+                      </td>
+                      <td>
+                        <textarea
+                          class="form-control"
+                          id="exampleFormControlTextarea1"
+                          rows="3"
+                        ></textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-6">
+                  <label for="">showing 1 to 1 of 1 entries</label>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a
+                          class="page-link"
+                          href="#"
+                          tabindex="-1"
+                          aria-disabled="true"
+                          >Previous</a
+                        >
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- opname content -->
+        <!-- history-opname content -->
+        <div
+          class="tab-pane fade"
+          id="v-pills-history-opname"
+          role="tabpanel"
+          aria-labelledby="v-pills-history-opname-tab"
+        >
+          <div class="container-fluid">
+            <div class="container mt-3">
+              <div class="row d-flex justify-content-evenly">
+                <div class="left col-4 bg-dark rounded p-2" style="color: #fff">
+                  <h4>Filter</h4>
+                  <div class="row px-3">
+                    <label for=""
+                      ><span style="color: red">*</span>Product</label
+                    >
+                    <select
+                      class="form-select my-1"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Select Product</option>
+                      <option value="1">Living Chair 1</option>
+                      <option value="2">Living Chair 2</option>
+                      <option value="3">Living Chair 3</option>
+                    </select>
+                  </div>
+                  <div class="row px-2 mt-2 d-flex justify-content-between">
+                    <div class="col-6">
+                      <label for=""
+                        ><span style="color: red">*</span>Size</label
+                      >
+                      <select
+                        class="form-select my-1"
+                        aria-label="Default select example"
+                        required
+                      >
+                        <option selected>Select Size</option>
+                        <option value="1">S</option>
+                        <option value="2">M</option>
+                        <option value="3">L</option>
+                        <option value="4">XL</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <label for=""
+                        ><span style="color: red">*</span>Color</label
+                      >
+                      <select
+                        class="form-select my-1"
+                        aria-label="Default select example"
+                        required
+                      >
+                        <option selected>Select Color</option>
+                        <option value="1">Varian 1</option>
+                        <option value="2">Varian 2</option>
+                        <option value="3">Varian 3</option>
+                        <option value="4">Varian 4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row px-2 mt-2 d-flex justify-content-between">
+                    <div class="col-6">
+                      <label for="datepicker"
+                        ><span style="color: red">*</span>Start Date:</label
+                      >
+                      <input
+                        class="rounded p-2 mt-1"
+                        type="date"
+                        id="datepicker"
+                        name="datepicker"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <label for="datepicker"
+                        ><span style="color: red">*</span>End Date:</label
+                      >
+                      <input
+                        class="rounded p-2 mt-1"
+                        type="date"
+                        id="datepicker"
+                        name="datepicker"
+                      />
+                    </div>
+                  </div>
+                  <div class="row px-3 my-3">
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseExample"
+                      aria-expanded="false"
+                      aria-controls="collapseExample"
+                    >
+                      View History
+                    </button>
+                  </div>
+                </div>
+
+                <div class="col-7 bg-dark rounded p-2" style="color: #fff">
+                  <h4>History</h4>
+                  <div class="row">
+                    <div class="collapse" id="collapseExample">
+                      <table class="table bg-light rounded">
+                        <thead>
+                          <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">In</th>
+                            <th scope="col">Out</th>
+                            <th scope="col">Stok</th>
+                            <th scope="col">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>23 November 2023</td>
+                            <td>6</td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>
+                              <span class="badge bg-success">use up</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>23 Desember 2023</td>
+                            <td>4</td>
+                            <td>8</td>
+                            <td>1</td>
+                            <td><span class="badge bg-danger">restok</span></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>23 Januari 2024</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>0</td>
+                            <td><span class="badge bg-danger">restok</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="row d-flex justify-content-between px-3">
+                        <div class="col-6">
+                          <label for="">showing 1 to 1 of 1 entries</label>
+                        </div>
+                        <div class="col-6">
+                          <nav aria-label="...">
+                            <ul class="pagination justify-content-end">
+                              <li class="page-item disabled">
+                                <a
+                                  class="page-link"
+                                  href="#"
+                                  tabindex="-1"
+                                  aria-disabled="true"
+                                  >Previous</a
+                                >
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link" href="#">1</a>
+                              </li>
+                              <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2</a>
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- history-opname content -->
+        <!-- transaction content -->
+        <div
+          class="tab-pane fade"
+          id="v-pills-transaction"
+          role="tabpanel"
+          aria-labelledby="v-pills-transaction-tab"
+        >
+          <div class="container-fluid">
+            <div class="container mt-3 border shadow">
+              <div
+                class="row d-flex justify-content-between align-items-center bg-dark rounded-top p-2"
+                style="color: #fff"
+              >
+                <div class="col-3">
+                  <h4>History Transaction</h4>
+                </div>
+              </div>
+              <div class="row px-2 mt-2 d-flex justify-content-between"></div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-2 d-flex align-items-center">
+                  <label for="">show</label>
+                  <select
+                    class="form-select mx-2"
+                    aria-label="Default select example"
+                  >
+                    <option selected>10</option>
+                    <option value="1">25</option>
+                    <option value="2">50</option>
+                    <option value="3">100</option>
+                  </select>
+                  <label for="">entities</label>
+                </div>
+                <div class="col-3 d-flex align-items-center">
+                  <label for="datepicker">Start Date: </label>
+                  <input
+                    class="rounded p-2 mx-2"
+                    type="date"
+                    id="datepicker"
+                    name="datepicker"
+                  />
+                </div>
+                <div class="col-3 d-flex align-items-center">
+                  <label for="datepicker">End Date: </label>
+                  <input
+                    class="rounded p-2 mx-2"
+                    type="date"
+                    id="datepicker"
+                    name="datepicker"
+                  />
+                </div>
+                <div class="col-4">
+                  <form class="d-flex">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Transaction Id"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="row px-3">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Product</th>
+                      <th scope="col">Transaction Id</th>
+                      <th scope="col">Username</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Nominal</th>
+                      <th scope="col">Download Invoice</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <th scope="row">2 unit Living Chair 1</th>
+                      <th scope="row">000213401674</th>
+                      <th scope="row">Yor Forger</th>
+                      <th scope="row">24 Januari 2024</th>
+                      <th scope="row">Rp. 9.198.000,-</th>
+                      <th scope="row"><a href="">Invoice</a></th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-6">
+                  <label for="">showing 1 to 1 of 1 entries</label>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a
+                          class="page-link"
+                          href="#"
+                          tabindex="-1"
+                          aria-disabled="true"
+                          >Previous</a
+                        >
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- transaction content -->
+        <!-- feedback content -->
+        <div
+          class="tab-pane fade"
+          id="v-pills-feedback"
+          role="tabpanel"
+          aria-labelledby="v-pills-feedback-tab"
+        >
+          <div class="container-fluid">
+            <div class="container mt-3 border shadow">
+              <div
+                class="row d-flex justify-content-between align-items-center bg-dark rounded-top p-2"
+                style="color: #fff"
+              >
+                <div class="col-3">
+                  <h4>Feedback</h4>
+                </div>
+              </div>
+              <div class="row px-2 mt-2 d-flex justify-content-between"></div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-2 d-flex align-items-center">
+                  <label for="">show</label>
+                  <select
+                    class="form-select mx-2"
+                    aria-label="Default select example"
+                  >
+                    <option selected>10</option>
+                    <option value="1">25</option>
+                    <option value="2">50</option>
+                    <option value="3">100</option>
+                  </select>
+                  <label for="">entities</label>
+                </div>
+                <div class="col-4">
+                  <form class="d-flex">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="row px-3">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">User Id</th>
+                      <th scope="col">Username</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Ulasan</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <th scope="row">000213401674</th>
+                      <th scope="row">Yor Forger</th>
+                      <th scope="row">yorforger@gmail.com</th>
+                      <th scope="row">24 Januari 2024</th>
+                      <th scope="row">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Vel labore dignissimos consequuntur temporibus
+                        tempore culpa ab inventore laborum repellat. Et?
+                      </th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row d-flex justify-content-between p-3">
+                <div class="col-6">
+                  <label for="">showing 1 to 1 of 1 entries</label>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a
+                          class="page-link"
+                          href="#"
+                          tabindex="-1"
+                          aria-disabled="true"
+                          >Previous</a
+                        >
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- feedback content -->
+        <!-- settings content -->
+        <div
+          class="tab-pane fade"
+          id="v-pills-settings"
+          role="tabpanel"
+          aria-labelledby="v-pills-settings-tab"
+        >
+          <div class="container w-100 vh-100">
+            <div class="row mt-5">
+              <!-- profile content -->
+              <div class="col-4 border px-4">
+                <div class="row border-bottom p-3">
+                  <div class="col-4">
+                    <img
+                      src="../../assets/img/admin.jpg"
+                      class="img-fluid rounded-circle"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-8 pt-1">
+                    <div
+                      class="row d-flex justify-content-between align-items-center"
+                    >
+                      <div class="col-9">
+                        <h4 class="fw-bold">Loid Forger</h4>
+                      </div>
+                      <div class="col-3">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                          data-bs-whatever="@mdo"
+                        >
+                          <i class="fa-solid fa-pen-to-square fa-xl"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p>loidforger@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <form action="">
+                    <h6 class="fw-bold">Change Password</h6>
+                    <div class="alert alert-warning" role="alert">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit!
+                    </div>
+                    <div class="row d-flex flex-column">
+                      <div class="col my-2">
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="inputPassword"
+                          placeholder="Old Password"
+                        />
+                      </div>
+                      <div class="col mb-2">
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="inputPassword"
+                          placeholder="New Password"
+                        />
+                      </div>
+                      <div class="col mb-2">
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="inputPassword"
+                          placeholder="Repeat New Password"
+                        />
+                      </div>
+                      <div class="col mb-2">
+                        <button
+                          style="
+                            background-color: #d6a4de;
+                            width: 100%;
+                            padding: 0.5rem;
+                          "
+                          type="submit"
+                          class="btn my-4"
+                        >
+                          <h4 class="fw-bold">Save</h4>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- profile content -->
+              <!-- history-transaction content -->
+              <div class="col-8 ps-4">
+                <div class="row border p-2">
+                  <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                      <button
+                        class="nav-link active"
+                        id="nav-history-transaction-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-history-transaction"
+                        type="button"
+                        role="tab"
+                        aria-controls="nav-history-transaction"
+                        aria-selected="true"
+                      >
+                        History Transaction
+                      </button>
+                      <button
+                        class="nav-link"
+                        id="nav-saved-address-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-saved-address"
+                        type="button"
+                        role="tab"
+                        aria-controls="nav-saved-address"
+                        aria-selected="false"
+                      >
+                        Saved Address
+                      </button>
+                    </div>
+                  </nav>
+                </div>
+                <div class="row border p-2 mt-2">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="nav-history-transaction"
+                      role="tabpanel"
+                      aria-labelledby="nav-history-transaction-tab"
+                    >
+                      <h5 class="fw-bold">History Transaction</h5>
+                      <table class="table">
+                        <thead style="background: #d6a4de">
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Transaction</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Invoice</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">FLC-001</th>
+                            <td>2 unit Living Chair</td>
+                            <td>13 Januari 2024</td>
+                            <td>
+                              <a
+                                href=""
+                                class="text-decoration-underline"
+                                style="color: blue"
+                                >Invoice</a
+                              >
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="nav-saved-address"
+                      role="tabpanel"
+                      aria-labelledby="nav-saved-address-tab"
+                    >
+                      <div class="row justify-content-between">
+                        <div class="col-4 mt-2">
+                          <h5 class="fw-bold">Saved Address</h5>
+                        </div>
+                        <div class="col-2">
+                          <a href="" class="fs-5" style="color: blue"
+                            ><i class="fa-solid fa-plus"></i> Address</a
+                          >
+                        </div>
+                        <div class="container px-4 py-2">
+                          <div
+                            class="row justify-content-between rounded"
+                            style="background: #d6a4de"
+                          >
+                            <div class="col-4 mt-2">
+                              <h6 class="fw-bold">Rumah</h6>
+                            </div>
+                            <div class="col-1">
+                              <button
+                                type="button"
+                                class="btn"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"
+                                data-bs-whatever="@mdo"
+                              >
+                                <i class="fa-solid fa-pen-to-square"></i>
+                              </button>
+                            </div>
+                            <div class="address small">
+                              <p>Penerima : Yor Forger</p>
+                              <p>
+                                Jalan Airlangga No. 2, Jawa Timur, Surabaya -
+                                60119
+                              </p>
+                              <p>Nomor yang dapat dihubungi 085791174251</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- history-transaction content -->
+            </div>
+          </div>
+        </div>
+        <!-- settings content -->
+      </div>
+      <!-- content -->
+    </div>
+    <!-- main content -->
+
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap js -->
+    <!-- fontAwesome js -->
+    <script
+      src="https://kit.fontawesome.com/cb14fdf8d5.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fontAwesome js -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery -->
+    <!-- Custom Script -->
+    <script src="../../assets/js/dashboard-admin.js"></script>
+    <!-- Custom Script -->
+  </body>
+</html>

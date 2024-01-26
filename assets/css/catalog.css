@@ -1,0 +1,69 @@
+.hero .card {
+  border-radius: 1rem;
+}
+
+.hero .card img {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.hero .card h5 {
+  color: #343a40;
+}
+
+.cover-catalog {
+  width: 100%;
+  height: 36rem;
+  /* background-color: red; */
+  box-sizing: border-box;
+}
+
+.cover-left {
+  width: 50%;
+  height: 100%;
+  background-color: #000;
+  /* border-right: 0.1rem solid #343a40; */
+  border-top-left-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+}
+
+.mid-line {
+  width: 1px;
+  height: 100%;
+  box-shadow: 2px 0px 16px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 0px 16px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 0px 16px 0px rgba(0, 0, 0, 0.75);
+}
+
+.cover-right {
+  width: 50%;
+  height: 100%;
+  background-color: #000;
+  border-top-right-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+}
+
+.paper-left {
+  width: 96%;
+  height: 92%;
+  background-color: #f1f1f1;
+  float: right;
+  margin-top: 1.5rem;
+  padding: 4rem 2rem 0 4rem;
+}
+
+.paper-right {
+  width: 96%;
+  height: 92%;
+  background-color: #fff;
+  margin-top: 1.5rem;
+  padding: 4rem 2rem 0 4rem;
+}
+
+.card {
+  border: none;
+}
+
+body a {
+  text-decoration: none;
+  color: #343a40;
+}
