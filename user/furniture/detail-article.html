@@ -14,13 +14,13 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
 
-    <title>AG | Profile Customer</title>
+    <title>AG | Indonesia's Starup</title>
   </head>
   <body>
     <!-- hero section -->
-    <section class="hero">
+    <section class="detail-article">
       <!-- navbar -->
       <nav
         class="navbar navbar-expand-lg navbar-light bg-transparent w-100 position-absolute top-0 start-0"
@@ -54,11 +54,6 @@
                 >
               </li>
               <!-- home nav -->
-              <!-- product nav -->
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="">PRODUCT</a>
-              </li>
-              <!-- product nav -->
               <!-- catalog nav -->
               <li class="nav-item dropdown">
                 <a
@@ -72,7 +67,11 @@
                   CATALOG
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="">Living Chair</a></li>
+                  <li>
+                    <a class="dropdown-item" href="catalog/living-chair.html"
+                      >Living Chair</a
+                    >
+                  </li>
                   <li><a class="dropdown-item" href="">Living Table</a></li>
                   <li><a class="dropdown-item" href="">Dining Table</a></li>
                   <li><a class="dropdown-item" href="">Dining Chair</a></li>
@@ -94,14 +93,14 @@
               <!-- catalog nav -->
               <!-- article nav -->
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active" aria-current="page" href="dashboard-customer.html#article"
                   >ARTICLE</a
                 >
               </li>
               <!-- article nav -->
               <!-- contact nav -->
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active" aria-current="page" href="#contact"
                   >CONTACT</a
                 >
               </li>
@@ -133,8 +132,12 @@
                   <i class="fa-solid fa-user"></i>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="">Profile</a></li>
-                  <li><a class="dropdown-item" href="">Sign Out</a></li>
+                  <li><a class="dropdown-item" href="profile-customer.html">Profile</a></li>
+                  <li>
+                    <a class="dropdown-item" href="../../index.html"
+                      >Sign Out</a
+                    >
+                  </li>
                 </ul>
               </li>
               <!-- user nav -->
@@ -143,211 +146,77 @@
         </div>
       </nav>
       <!-- navbar -->
-      <!-- main content -->
-      <div class="container w-100 vh-100 py-5">
-        <div class="row mt-5">
-          <!-- profile content -->
-          <div class="col-4 border px-4">
-            <div class="row border-bottom p-3">
-              <div class="col-4">
-                <img
-                  src="../assets/img/user.jpg"
-                  class="img-fluid rounded-circle"
-                  alt=""
-                />
-              </div>
-              <div class="col-8 pt-1">
-                <div
-                  class="row d-flex justify-content-between align-items-center"
-                >
-                  <div class="col-9">
-                    <h4 class="fw-bold">Yor Forger</h4>
-                  </div>
-                  <div class="col-3">
-                    <button
-                      type="button"
-                      class="btn"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                      data-bs-whatever="@mdo"
-                    >
-                      <i class="fa-solid fa-pen-to-square fa-xl"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="row">
-                  <p>yorforger@gmail.com</p>
-                </div>
-              </div>
-            </div>
-            <div class="row mt-3">
-              <form action="">
-                <h6 class="fw-bold">Change Password</h6>
-                <div class="alert alert-warning" role="alert">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit!
-                </div>
-                <div class="row d-flex flex-column">
-                  <div class="col my-2">
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="inputPassword"
-                      placeholder="Old Password"
-                    />
-                  </div>
-                  <div class="col mb-2">
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="inputPassword"
-                      placeholder="New Password"
-                    />
-                  </div>
-                  <div class="col mb-2">
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="inputPassword"
-                      placeholder="Repeat New Password"
-                    />
-                  </div>
-                  <div class="col mb-2">
-                    <button
-                      style="
-                        background-color: #d6a4de;
-                        width: 100%;
-                        padding: 0.5rem;
-                      "
-                      type="submit"
-                      class="btn my-4"
-                    >
-                      <h4 class="fw-bold">Save</h4>
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
+      <!-- detail-article content -->
+      <div class="container w-100 py-5">
+        <div class="card mt-4">
+          <div class="card-body text-center">
+            <h5 class="card-title fs-2">Indonesian Startup</h5>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
           </div>
-          <!-- profile content -->
-          <!-- history-transaction content -->
-          <div class="col-8 ps-4">
-            <div class="row border p-2">
-              <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                  <button
-                    class="nav-link active"
-                    id="nav-history-transaction-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#nav-history-transaction"
-                    type="button"
-                    role="tab"
-                    aria-controls="nav-history-transaction"
-                    aria-selected="true"
-                  >
-                    History Transaction
-                  </button>
-                  <button
-                    class="nav-link"
-                    id="nav-saved-address-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#nav-saved-address"
-                    type="button"
-                    role="tab"
-                    aria-controls="nav-saved-address"
-                    aria-selected="false"
-                  >
-                    Saved Address
-                  </button>
-                </div>
-              </nav>
-            </div>
-            <div class="row border p-2 mt-2">
-              <div class="tab-content" id="nav-tabContent">
-                <div
-                  class="tab-pane fade show active"
-                  id="nav-history-transaction"
-                  role="tabpanel"
-                  aria-labelledby="nav-history-transaction-tab"
-                >
-                  <h5 class="fw-bold">History Transaction</h5>
-                  <table class="table">
-                    <thead style="background: #d6a4de">
-                      <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Transaction</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Invoice</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">FLC-001</th>
-                        <td>2 unit Living Chair</td>
-                        <td>13 Januari 2024</td>
-                        <td>
-                          <a
-                            href=""
-                            class="text-decoration-underline"
-                            style="color: blue"
-                            >Invoice</a
-                          >
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div
-                  class="tab-pane fade"
-                  id="nav-saved-address"
-                  role="tabpanel"
-                  aria-labelledby="nav-saved-address-tab"
-                >
-                  <div class="row justify-content-between">
-                    <div class="col-4 mt-2">
-                      <h5 class="fw-bold">Saved Address</h5>
-                    </div>
-                    <div class="col-2">
-                      <a href="" class="fs-5" style="color: blue"
-                        ><i class="fa-solid fa-plus"></i> Address</a
-                      >
-                    </div>
-                    <div class="container px-4 py-2">
-                      <div
-                        class="row justify-content-between rounded"
-                        style="background: #d6a4de"
-                      >
-                        <div class="col-4 mt-2">
-                          <h6 class="fw-bold">Rumah</h6>
-                        </div>
-                        <div class="col-1">
-                          <button
-                            type="button"
-                            class="btn"
-                            data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"
-                            data-bs-whatever="@mdo"
-                          >
-                            <i class="fa-solid fa-pen-to-square"></i>
-                          </button>
-                        </div>
-                        <div class="address small">
-                          <p>Penerima : Yor Forger</p>
-                          <p>
-                            Jalan Airlangga No. 2, Jawa Timur, Surabaya - 60119
-                          </p>
-                          <p>Nomor yang dapat dihubungi 085791174251</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <img
+            src="../../assets/img/article/main/main-article.jpg"
+            class="card-img-bottom p-4"
+            alt="..."
+          />
+          <div class="article p-4 fs-5">
+            <p class="card-text text-break">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
+              quas aut repellendus nihil voluptatibus maxime, nulla officiis
+              magni veniam, molestiae et! Perferendis quae est maiores omnis
+              fugit dolore alias expedita cum possimus dignissimos, voluptates
+              ratione, tempore nulla, modi saepe. Repudiandae illo saepe, in
+              minima dolore harum repellat, architecto corporis quia, nam
+              eligendi et aliquid quam? Facere praesentium sapiente reiciendis
+              qui numquam ipsa, beatae quibusdam? Expedita dolorum voluptate
+              quis repudiandae neque numquam ipsa a quas eum, ratione, maxime
+              earum reprehenderit velit facilis veritatis praesentium, nostrum
+              adipisci quod laudantium molestias sapiente obcaecati cumque?
+              Voluptas molestiae, ratione saepe autem perspiciatis veritatis
+              fugiat temporibus aliquam suscipit, esse obcaecati. Exercitationem
+              praesentium in rem, nulla sint delectus asperiores facilis sequi
+              quasi sed voluptate, ad harum laboriosam odit aliquid. At
+              aspernatur provident assumenda cumque mollitia similique natus
+              laboriosam incidunt quibusdam eligendi, odit, tempora
+              reprehenderit totam quos unde ipsa dolores. Eum praesentium
+              reiciendis aliquid illo, cumque quas dicta minima nam fugiat
+              corporis, quo voluptas sapiente natus dolorum quod odio voluptatum
+              dolor. Ipsum error hic totam placeat quibusdam, sint omnis fuga.
+              Magnam quas nisi accusantium dolores modi iste debitis ad deserunt
+              quibusdam enim deleniti, iusto eius repellat sit. Quae incidunt ut
+              maxime animi quam minus a obcaecati assumenda ipsam?
+            </p>
+            <p class="card-text text-break">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
+              quod quos, quia iste enim unde, libero quas maiores sit harum
+              eaque. Pariatur ducimus aliquid impedit maxime voluptatem sit
+              repellat quia dolores nobis sunt minima aperiam quod, hic sint
+              omnis officia optio odio quaerat dolorum ipsam quibusdam
+              reprehenderit iusto! Odit, voluptas cum suscipit id molestiae
+              corporis similique quibusdam atque in ipsum, cupiditate minima
+              illum nobis odio quis, alias mollitia? Soluta exercitationem,
+              dignissimos eveniet atque, numquam consectetur voluptates, eius
+              dolores et velit mollitia provident rerum similique ipsa
+              repudiandae repellat unde. Blanditiis impedit illo quos labore,
+              neque dolor? Ad aliquid aspernatur, dignissimos asperiores optio
+              voluptatum impedit accusamus aut dicta, unde assumenda consectetur
+              officiis repellat autem quos illo. Accusamus impedit saepe fuga
+              nobis, unde, consectetur est cumque delectus itaque quae deleniti
+              commodi minima a quos? Deleniti, alias! Id consectetur dicta
+              minima ipsum cum dolorum sequi, corporis fugiat eaque illum,
+              consequuntur aliquam veniam, quos omnis numquam eos. Fugiat
+              temporibus maiores voluptatem praesentium possimus neque
+              reprehenderit. Dicta libero praesentium quos, rerum ex vero et
+              perspiciatis corrupti unde culpa odio. Unde vitae ad eligendi
+              molestias ut illum sed laborum atque reiciendis aliquid ipsum, ea
+              labore iusto doloremque, neque sit quaerat necessitatibus saepe
+              fugiat id laboriosam impedit nisi.
+            </p>
           </div>
-          <!-- history-transaction content -->
         </div>
       </div>
-      <!-- main content -->
+      <!-- detail-article content -->
     </section>
     <!-- hero section -->
 
