@@ -14,9 +14,8 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/catalog.css" />
-    <link rel="stylesheet" href="../assets/css/detail-product.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/detail-product.css" />
 
     <title>AG | Living Chair 1</title>
   </head>
@@ -25,7 +24,7 @@
     <section class="hero">
       <!-- video background -->
       <video autoplay loop muted plays-inline class="back-video">
-        <source src="../assets/video/hero3.mp4" type="video/mp4" />
+        <source src="../../assets/video/hero3.mp4" type="video/mp4" />
       </video>
       <!-- video background -->
       <!-- navbar -->
@@ -141,50 +140,59 @@
       <!-- catalog content -->
       <div class="container-fluid w-100 vh-100 py-5">
         <div class="row mt-5 justify-content-center gap-3">
-          <div class="col-5 bg-dark p-3">
-            <div class="row">
+          <div class="col-5 p-3">
+            <div class="row" id="main-img">
               <img
                 class="img-fluid"
-                src="../assets/img/product/catalog/furniture/living-chair/living-chair1.jpg"
+                src="../../assets/img/product/catalog/furniture/living-chair/living-chair1.jpg"
                 alt=""
+                id="main-image"
               />
             </div>
             <div class="row mt-4 d-flex">
               <div class="col-3">
-                <a href=""
-                  ><img
+                <a href="#" onclick="changeImage('img-v1')">
+                  <img
                     class="img-fluid"
-                    src="../assets/img/product/catalog/furniture/living-chair/living-chair1.jpg"
+                    src="../../assets/img/product/catalog/furniture/living-chair/living-chair1.jpg"
                     alt=""
-                /></a>
+                    id="img-v1"
+                  />
+                </a>
               </div>
               <div class="col-3">
-                <a href=""
-                  ><img
+                <a href="#" onclick="changeImage('img-v2')">
+                  <img
                     class="img-fluid"
-                    src="../assets/img/product/catalog/furniture/living-chair/living-chair2.jpg"
+                    src="../../assets/img/product/catalog/furniture/living-chair/living-chair2.jpg"
                     alt=""
-                /></a>
+                    id="img-v2"
+                  />
+                </a>
               </div>
               <div class="col-3">
-                <a href=""
-                  ><img
+                <a href="#" onclick="changeImage('img-v3')">
+                  <img
                     class="img-fluid"
-                    src="../assets/img/product/catalog/furniture/living-chair/living-chair3.jpg"
+                    src="../../assets/img/product/catalog/furniture/living-chair/living-chair3.jpg"
                     alt=""
-                /></a>
+                    id="img-v3"
+                  />
+                </a>
               </div>
               <div class="col-3">
-                <a href=""
-                  ><img
+                <a href="#" onclick="changeImage('img-v4')">
+                  <img
                     class="img-fluid"
-                    src="../assets/img/product/catalog/furniture/living-chair/living-chair4.jpg"
+                    src="../../assets/img/product/catalog/furniture/living-chair/living-chair4.jpg"
                     alt=""
-                /></a>
+                    id="img-v4"
+                  />
+                </a>
               </div>
             </div>
           </div>
-          <div class="col-5 bg-dark p-3">
+          <div class="col-5 p-3">
             <div class="row border-bottom">
               <h2><strong>Living Chair 1</strong></h2>
               <p><strong>Item No : </strong> FLC-001</p>
@@ -226,7 +234,9 @@
                     >+</a
                   >
                 </div>
-                <a href="../auth/furniture/login.html" class="btn btn-light">Login to Order</a>
+                <a href="../auth/furniture/login.html" class="btn btn-light"
+                  >Login to Order</a
+                >
               </div>
             </div>
           </div>
@@ -481,5 +491,15 @@
       src="https://kit.fontawesome.com/cb14fdf8d5.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function changeImage(imageId) {
+        // Dapatkan elemen gambar utama dan gambar miniatur yang diklik
+        var mainImage = document.getElementById("main-image");
+        var clickedImage = document.getElementById(imageId);
+
+        // Ubah sumber gambar utama sesuai dengan sumber gambar miniatur yang diklik
+        mainImage.src = clickedImage.src;
+      }
+    </script>
   </body>
 </html>
