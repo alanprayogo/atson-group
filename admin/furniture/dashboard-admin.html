@@ -1225,15 +1225,16 @@
                   type="button"
                   class="btn btn-primary"
                   data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
+                  data-bs-target="#add-admin-Modal"
                   data-bs-whatever="@mdo"
                   style="width: 12rem"
                 >
                   <i class="fa-solid fa-plus"></i> Add Admin
                 </button>
+                <!-- add-admin modal -->
                 <div
                   class="modal fade"
-                  id="exampleModal"
+                  id="add-admin-Modal"
                   tabindex="-1"
                   aria-labelledby="exampleModalLabel"
                   aria-hidden="true"
@@ -1346,10 +1347,40 @@
                         <button type="button" class="btn btn-primary">
                           Save
                         </button>
+
+                        <script>
+                          // Menangkap tombol "Save"
+                          const saveButton = document.querySelector(
+                            ".modal-footer button.btn-primary"
+                          );
+                    
+                          // Menambahkan event listener untuk meng-handle klik tombol "Save"
+                          saveButton.addEventListener("click", function () {
+                            // Menutup modal
+                            $("#add-admin-Modal").modal("hide");
+                    
+                            // Menampilkan alert success
+                            const alertSuccess = `
+                              <div class="alert alert-success alert-dismissible fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+                                Data saved successfully
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                            `;
+                    
+                            // Menambahkan alert success ke dalam body
+                            document.body.insertAdjacentHTML("beforeend", alertSuccess);
+                    
+                            // Menghilangkan alert setelah 3 detik
+                            setTimeout(function () {
+                              $(".alert").alert("close");
+                            }, 4000);
+                          });
+                        </script>
                       </div>
                     </div>
                   </div>
                 </div>
+                <!-- add-admin modal -->
               </div>
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
@@ -1399,24 +1430,6 @@
                       <td>loidforger@gmail.com</td>
                       <td>Furniture Manager</td>
                       <td class="float-end">
-                        <!-- <button
-                          type="button"
-                          class="btn btn-danger"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Delete"
-                        >
-                          <i class="fa-solid fa-trash"></i>
-                        </button> -->
-                        <!-- Button trigger modal -->
-                        <!-- <button
-                          type="button"
-                          class="btn btn-danger"
-                          data-bs-toggle="modal"
-                          data-bs-target="#exampleModal"
-                        >
-                        <i class="fa-solid fa-trash"></i>
-                        </button> -->
                         <button
                           type="button"
                           class="btn btn-danger"
@@ -1428,55 +1441,7 @@
                           onclick="showModal()"
                         >
                           <i class="fa-solid fa-trash"></i>
-                        </button>
-
-                        <script>
-                          // Fungsi untuk menampilkan modal
-                          function showModal() {
-                            $('#modalDelete').modal('show');
-                          }
-                        </script>
-
-                        <!-- Modal -->
-                        <div
-                          class="modal fade"
-                          id="modalDelete"
-                          tabindex="-1"
-                          aria-labelledby="exampleModalLabel"
-                          aria-hidden="true"
-                        >
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">
-                                  System Alert
-                                </h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                  aria-label="Close"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                Are you sure to delete this data?
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  No
-                                </button>
-                                <button type="button" class="btn btn-primary">
-                                  Yes
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
+                        </button> 
                         <button
                           type="button"
                           class="btn btn-warning"
@@ -3910,28 +3875,6 @@
     <!-- Custom Script -->
 
     <!-- Tambahkan skrip JavaScript di bawah modal-footer -->
-    <script>
-      // Menangkap tombol "Save"
-      const saveButton = document.querySelector(
-        ".modal-footer button.btn-primary"
-      );
-
-      // Menambahkan event listener untuk meng-handle klik tombol "Save"
-      saveButton.addEventListener("click", function () {
-        // Menutup modal
-        $("#exampleModal").modal("hide");
-
-        // Menampilkan alert success
-        const alertSuccess = `
-      <div class="alert alert-success alert-dismissible fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
-        Data saved successfully
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-    `;
-
-        // Menambahkan alert success ke dalam body
-        document.body.insertAdjacentHTML("beforeend", alertSuccess);
-      });
-    </script>
+   
   </body>
 </html>
