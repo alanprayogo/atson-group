@@ -58,7 +58,7 @@
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="#"
+                href="login.html"
                 data-bs-toggle="tooltip"
                 data-bs-placement="bottom"
                 title="Logout"
@@ -1224,10 +1224,132 @@
                 <button
                   type="button"
                   class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  data-bs-whatever="@mdo"
                   style="width: 12rem"
                 >
                   <i class="fa-solid fa-plus"></i> Add Admin
                 </button>
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Add Admin
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="row g-3">
+                          <div class="col-md-6">
+                            <label for="id" class="form-label">ID</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputID"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="fullname" class="form-label"
+                              >Fullname</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputFullname"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="username" class="form-label"
+                              >Username</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputUsername"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPassword" class="form-label"
+                              >Password</label
+                            >
+                            <input
+                              type="password"
+                              class="form-control"
+                              id="inputPassword"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label"
+                              >Email</label
+                            >
+                            <input
+                              type="email"
+                              class="form-control"
+                              id="inputEmail4"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPhone" class="form-label"
+                              >Phone</label
+                            >
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="inputPhone"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputAddress" class="form-label"
+                              >Address</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputAddress"
+                              placeholder="1234 Main St"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPosition" class="form-label"
+                              >Position</label
+                            >
+                            <select id="inputPosition" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>CEO</option>
+                              <option>Furniture Manager</option>
+                              <option>HR Manager</option>
+                            </select>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                          Save
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
@@ -1277,7 +1399,7 @@
                       <td>loidforger@gmail.com</td>
                       <td>Furniture Manager</td>
                       <td class="float-end">
-                        <button
+                        <!-- <button
                           type="button"
                           class="btn btn-danger"
                           data-bs-toggle="tooltip"
@@ -1285,7 +1407,76 @@
                           title="Delete"
                         >
                           <i class="fa-solid fa-trash"></i>
+                        </button> -->
+                        <!-- Button trigger modal -->
+                        <!-- <button
+                          type="button"
+                          class="btn btn-danger"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                        >
+                        <i class="fa-solid fa-trash"></i>
+                        </button> -->
+                        <button
+                          type="button"
+                          class="btn btn-danger"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="bottom"
+                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalDelete"
+                          onclick="showModal()"
+                        >
+                          <i class="fa-solid fa-trash"></i>
                         </button>
+
+                        <script>
+                          // Fungsi untuk menampilkan modal
+                          function showModal() {
+                            $('#modalDelete').modal('show');
+                          }
+                        </script>
+
+                        <!-- Modal -->
+                        <div
+                          class="modal fade"
+                          id="modalDelete"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  System Alert
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                Are you sure to delete this data?
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  No
+                                </button>
+                                <button type="button" class="btn btn-primary">
+                                  Yes
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
                         <button
                           type="button"
                           class="btn btn-warning"
@@ -3717,5 +3908,30 @@
     <!-- Custom Script -->
     <script src="../../assets/js/dashboard-admin.js"></script>
     <!-- Custom Script -->
+
+    <!-- Tambahkan skrip JavaScript di bawah modal-footer -->
+    <script>
+      // Menangkap tombol "Save"
+      const saveButton = document.querySelector(
+        ".modal-footer button.btn-primary"
+      );
+
+      // Menambahkan event listener untuk meng-handle klik tombol "Save"
+      saveButton.addEventListener("click", function () {
+        // Menutup modal
+        $("#exampleModal").modal("hide");
+
+        // Menampilkan alert success
+        const alertSuccess = `
+      <div class="alert alert-success alert-dismissible fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+        Data saved successfully
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    `;
+
+        // Menambahkan alert success ke dalam body
+        document.body.insertAdjacentHTML("beforeend", alertSuccess);
+      });
+    </script>
   </body>
 </html>
