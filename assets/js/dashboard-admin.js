@@ -442,3 +442,303 @@ updatearticleButton.addEventListener("click", function () {
     $(".alert").alert("close");
   }, 4000);
 });
+
+// add-category
+const saveCategoryButton = document.querySelector(".category button.btn-primary");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Save"
+saveCategoryButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#add-category-Modal").modal("hide");
+
+  // Menampilkan alert success
+  const alertSuccess = `
+    <div class="alert alert-success alert-dismissible fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data saved successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert success ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertSuccess);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});
+
+// delete-category
+const deleteCategoryButton = document.querySelector(".category button.btn-danger");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Delete"
+deleteCategoryButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#delete-category-Modal").modal("hide");
+
+  // Menampilkan alert danger dengan latar belakang yang berbeda
+  const alertDanger = `
+    <div class="alert alert-danger alert-dismissible bg-danger fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data deleted successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert danger ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertDanger);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});
+
+// update-category
+const updateCategoryButton = document.querySelector(".category button.btn-warning");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Update"
+updateCategoryButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#update-category-Modal").modal("hide");
+
+  // Menampilkan alert warning
+  const alertWarning = `
+    <div class="alert alert-warning alert-dismissible bg-warning fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data updated successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert warning ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertWarning);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});
+
+// add-sub-category
+const saveSubCategoryButton = document.querySelector(".sub-category button.btn-primary");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Save"
+saveSubCategoryButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#add-sub-category-Modal").modal("hide");
+
+  // Menampilkan alert success
+  const alertSuccess = `
+    <div class="alert alert-success alert-dismissible fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data saved successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert success ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertSuccess);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});
+
+// delete-sub-category
+const deleteSubCategoryButton = document.querySelector(".sub-category button.btn-danger");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Delete"
+deleteSubCategoryButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#delete-sub-category-Modal").modal("hide");
+
+  // Menampilkan alert danger dengan latar belakang yang berbeda
+  const alertDanger = `
+    <div class="alert alert-danger alert-dismissible bg-danger fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data deleted successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert danger ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertDanger);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});
+
+// update-sub-category
+const updateSubCategoryButton = document.querySelector(".sub-category button.btn-warning");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Update"
+updateSubCategoryButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#update-sub-category-Modal").modal("hide");
+
+  // Menampilkan alert warning
+  const alertWarning = `
+    <div class="alert alert-warning alert-dismissible bg-warning fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data updated successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert warning ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertWarning);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});
+
+// add-size
+const saveSizeButton = document.querySelector(".size button.btn-primary");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Save"
+saveSizeButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#add-size-Modal").modal("hide");
+
+  // Menampilkan alert success
+  const alertSuccess = `
+    <div class="alert alert-success alert-dismissible fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data saved successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert success ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertSuccess);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});
+
+// delete-size
+const deleteSizeButton = document.querySelector(".size button.btn-danger");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Delete"
+deleteSizeButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#delete-size-Modal").modal("hide");
+
+  // Menampilkan alert danger dengan latar belakang yang berbeda
+  const alertDanger = `
+    <div class="alert alert-danger alert-dismissible bg-danger fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data deleted successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert danger ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertDanger);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});
+
+// update-size
+const updateSizeButton = document.querySelector(".size button.btn-warning");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Update"
+updateSizeButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#update-size-Modal").modal("hide");
+
+  // Menampilkan alert warning
+  const alertWarning = `
+    <div class="alert alert-warning alert-dismissible bg-warning fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data updated successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert warning ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertWarning);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});
+
+// add-color
+const saveColorButton = document.querySelector(".color button.btn-primary");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Save"
+saveColorButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#add-color-Modal").modal("hide");
+
+  // Menampilkan alert success
+  const alertSuccess = `
+    <div class="alert alert-success alert-dismissible fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data saved successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert success ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertSuccess);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});
+
+// delete-color
+const deleteColorButton = document.querySelector(".color button.btn-danger");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Delete"
+deleteColorButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#delete-color-Modal").modal("hide");
+
+  // Menampilkan alert danger dengan latar belakang yang berbeda
+  const alertDanger = `
+    <div class="alert alert-danger alert-dismissible bg-danger fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data deleted successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert danger ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertDanger);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});
+
+// update-color
+const updateColorButton = document.querySelector(".color button.btn-warning");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Update"
+updateColorButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#update-color-Modal").modal("hide");
+
+  // Menampilkan alert warning
+  const alertWarning = `
+    <div class="alert alert-warning alert-dismissible bg-warning fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data updated successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert warning ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertWarning);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});

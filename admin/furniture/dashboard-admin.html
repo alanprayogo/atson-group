@@ -4235,15 +4235,94 @@
                   <h4>Category</h4>
                 </div>
               </div>
+              <!-- add-category-modal -->
               <div class="row justify-content-end mt-3 me-3">
                 <button
                   type="button"
                   class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#add-category-Modal"
+                  data-bs-whatever="@mdo"
                   style="width: 12rem"
                 >
                   <i class="fa-solid fa-plus"></i> Add Category
                 </button>
+                <div
+                  class="modal fade"
+                  id="add-category-Modal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Add Category
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="row g-3">
+                          <div class="col-md-6">
+                            <label for="inputPosition" class="form-label"
+                              >Category</label
+                            >
+                            <select id="inputPosition" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>Chair</option>
+                              <option>Table</option>
+                              <option>Sofa</option>
+                              <option>Bed</option>
+                              <option>Cabinet</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPosition" class="form-label"
+                              >Sub Category</label
+                            >
+                            <select id="inputPosition" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>Living Chair</option>
+                              <option>Dinning Chair</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPosition" class="form-label"
+                              >Status</label
+                            >
+                            <select id="inputPosition" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>active</option>
+                              <option>none-active</option>
+                            </select>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <div class="category">
+                          <button type="button" class="btn btn-primary">
+                            Save
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <!-- add-category modal -->
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
                   <label for="">show</label>
@@ -4293,24 +4372,142 @@
                       </td>
                       <td><span class="badge bg-success">active</span></td>
                       <td class="float-end">
+                        <!-- delete-category-modal -->
                         <button
                           type="button"
                           class="btn btn-danger"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete-category-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-trash"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="delete-category-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  System Alert!
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                Are you sure delete this data?
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Cancel
+                                </button>
+                                <div class="category">
+                                  <button type="button" class="btn btn-danger">
+                                    Sure
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- delete-category-modal -->
+                        <!-- update-category-modal -->
                         <button
                           type="button"
                           class="btn btn-warning"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Update"
+                          data-bs-toggle="modal"
+                          data-bs-target="#update-category-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-pen-to-square"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="update-category-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Update Article
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="inputPosition" class="form-label"
+                                      >Category</label
+                                    >
+                                    <select id="inputPosition" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>Chair</option>
+                                      <option>Table</option>
+                                      <option>Sofa</option>
+                                      <option>Bed</option>
+                                      <option>Cabinet</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputPosition" class="form-label"
+                                      >Sub Category</label
+                                    >
+                                    <select id="inputPosition" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>Living Chair</option>
+                                      <option>Dinning Chair</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputPosition" class="form-label"
+                                      >Status</label
+                                    >
+                                    <select id="inputPosition" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>active</option>
+                                      <option>none-active</option>
+                                    </select>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <div class="category">
+                                  <button type="button" class="btn btn-warning">
+                                    Save
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- update-category-modal -->
                       </td>
                     </tr>
                   </tbody>
@@ -4369,15 +4566,111 @@
                   <h4>Sub Category</h4>
                 </div>
               </div>
+              <!-- add-sub-category-modal -->
               <div class="row justify-content-end mt-3 me-3">
                 <button
                   type="button"
                   class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#add-sub-category-Modal"
+                  data-bs-whatever="@mdo"
                   style="width: 12rem"
                 >
                   <i class="fa-solid fa-plus"></i> Add Sub Category
                 </button>
+                <div
+                  class="modal fade"
+                  id="add-sub-category-Modal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Add Sub Category
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="row g-3">
+                          <div class="col-md-6">
+                            <label for="inputPosition" class="form-label"
+                              >Sub Category</label
+                            >
+                            <select id="inputPosition" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>Living Chair</option>
+                              <option>Dinning Chair</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPosition" class="form-label"
+                              >Size</label
+                            >
+                            <select id="inputPosition" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>S</option>
+                              <option>M</option>
+                              <option>L</option>
+                              <option>XL</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPosition" class="form-label"
+                              >Color</label
+                            >
+                            <select id="inputPosition" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>Varian 1</option>
+                              <option>Varian 2</option>
+                              <option>Varian 3</option>
+                              <option>Varian 4</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label for="formFile" class="form-label">Product Image</label>
+                              <input class="form-control" type="file" id="formFile">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPosition" class="form-label"
+                              >Status</label
+                            >
+                            <select id="inputPosition" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>active</option>
+                              <option>none-active</option>
+                            </select>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <div class="sub-category">
+                          <button type="button" class="btn btn-primary">
+                            Save
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <!-- add-sub-category modal -->
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
                   <label for="">show</label>
@@ -4412,6 +4705,8 @@
                     <tr>
                       <th scope="col">No</th>
                       <th scope="col">Sub Category</th>
+                      <th scope="col">Size</th>
+                      <th scope="col">Color</th>
                       <th scope="col">Images</th>
                       <th scope="col">Status</th>
                       <th class="float-end" scope="col">Action</th>
@@ -4421,6 +4716,8 @@
                     <tr>
                       <th scope="row">1</th>
                       <td>Living Chair</td>
+                      <td>M</td>
+                      <td>Varian 1</td>
                       <td>
                         <img
                           style="width: 8rem"
@@ -4430,24 +4727,159 @@
                       </td>
                       <td><span class="badge bg-success">active</span></td>
                       <td class="float-end">
+                        <!-- delete-sub-category-modal -->
                         <button
                           type="button"
                           class="btn btn-danger"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete-sub-category-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-trash"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="delete-sub-category-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  System Alert!
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                Are you sure delete this data?
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Cancel
+                                </button>
+                                <div class="sub-category">
+                                  <button type="button" class="btn btn-danger">
+                                    Sure
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- delete-sub-category-modal -->
+                        <!-- update-sub-category-modal -->
                         <button
                           type="button"
                           class="btn btn-warning"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Update"
+                          data-bs-toggle="modal"
+                          data-bs-target="#update-sub-category-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-pen-to-square"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="update-sub-category-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Update Article
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="inputPosition" class="form-label"
+                                      >Sub Category</label
+                                    >
+                                    <select id="inputPosition" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>Living Chair</option>
+                                      <option>Dinning Chair</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputPosition" class="form-label"
+                                      >Size</label
+                                    >
+                                    <select id="inputPosition" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>S</option>
+                                      <option>M</option>
+                                      <option>L</option>
+                                      <option>XL</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputPosition" class="form-label"
+                                      >Color</label
+                                    >
+                                    <select id="inputPosition" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>Varian 1</option>
+                                      <option>Varian 2</option>
+                                      <option>Varian 3</option>
+                                      <option>Varian 4</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="mb-3">
+                                      <label for="formFile" class="form-label">Product Image</label>
+                                      <input class="form-control" type="file" id="formFile">
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputPosition" class="form-label"
+                                      >Status</label
+                                    >
+                                    <select id="inputPosition" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>active</option>
+                                      <option>none-active</option>
+                                    </select>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <div class="sub-category">
+                                  <button type="button" class="btn btn-warning">
+                                    Save
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- update-sub-category-modal -->
                       </td>
                     </tr>
                   </tbody>
@@ -4506,15 +4938,87 @@
                   <h4>Size</h4>
                 </div>
               </div>
-              <div class="row justify-content-end mt-3 me-3">
+               <!-- add-size-modal -->
+               <div class="row justify-content-end mt-3 me-3">
                 <button
                   type="button"
                   class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#add-size-Modal"
+                  data-bs-whatever="@mdo"
                   style="width: 12rem"
                 >
                   <i class="fa-solid fa-plus"></i> Add Size
                 </button>
+                <div
+                  class="modal fade"
+                  id="add-size-Modal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Add Size
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="row g-3">
+                          <div class="col-md-6">
+                            <label for="id" class="form-label">Size</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputID"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="id" class="form-label">Detail</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputID"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPosition" class="form-label"
+                              >Status</label
+                            >
+                            <select id="inputPosition" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>active</option>
+                              <option>none-active</option>
+                            </select>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <div class="size">
+                          <button type="button" class="btn btn-primary">
+                            Save
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <!-- add-size modal -->
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
                   <label for="">show</label>
@@ -4561,24 +5065,135 @@
                       <td>1m x 1m</td>
                       <td><span class="badge bg-success">active</span></td>
                       <td class="float-end">
+                        <!-- delete-size-modal -->
                         <button
                           type="button"
                           class="btn btn-danger"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete-size-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-trash"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="delete-size-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  System Alert!
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                Are you sure delete this data?
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Cancel
+                                </button>
+                                <div class="size">
+                                  <button type="button" class="btn btn-danger">
+                                    Sure
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- delete-size-modal -->
+                        <!-- update-size-modal -->
                         <button
                           type="button"
                           class="btn btn-warning"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Update"
+                          data-bs-toggle="modal"
+                          data-bs-target="#update-size-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-pen-to-square"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="update-size-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Update Article
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label">Size</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label">Detail</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputPosition" class="form-label"
+                                      >Status</label
+                                    >
+                                    <select id="inputPosition" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>active</option>
+                                      <option>none-active</option>
+                                    </select>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <div class="size">
+                                  <button type="button" class="btn btn-warning">
+                                    Save
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- update-size-modal -->
                       </td>
                     </tr>
                     <tr>
@@ -4587,24 +5202,135 @@
                       <td>2m x 2m</td>
                       <td><span class="badge bg-success">active</span></td>
                       <td class="float-end">
+                        <!-- delete-size-modal -->
                         <button
                           type="button"
                           class="btn btn-danger"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete-size-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-trash"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="delete-size-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  System Alert!
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                Are you sure delete this data?
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Cancel
+                                </button>
+                                <div class="size">
+                                  <button type="button" class="btn btn-danger">
+                                    Sure
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- delete-size-modal -->
+                        <!-- update-size-modal -->
                         <button
                           type="button"
                           class="btn btn-warning"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Update"
+                          data-bs-toggle="modal"
+                          data-bs-target="#update-size-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-pen-to-square"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="update-size-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Update Article
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label">Size</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label">Detail</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputPosition" class="form-label"
+                                      >Status</label
+                                    >
+                                    <select id="inputPosition" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>active</option>
+                                      <option>none-active</option>
+                                    </select>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <div class="size">
+                                  <button type="button" class="btn btn-warning">
+                                    Save
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- update-size-modal -->
                       </td>
                     </tr>
                   </tbody>
@@ -4652,15 +5378,87 @@
                   <h4>Color</h4>
                 </div>
               </div>
+              <!-- add-color-modal -->
               <div class="row justify-content-end mt-3 me-3">
                 <button
                   type="button"
                   class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#add-color-Modal"
+                  data-bs-whatever="@mdo"
                   style="width: 12rem"
                 >
                   <i class="fa-solid fa-plus"></i> Add Color
                 </button>
+                <div
+                  class="modal fade"
+                  id="add-color-Modal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Add Color
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="row g-3">
+                          <div class="col-md-6">
+                            <label for="id" class="form-label">Size</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputID"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="id" class="form-label">Detail</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputID"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPosition" class="form-label"
+                              >Status</label
+                            >
+                            <select id="inputPosition" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>active</option>
+                              <option>none-active</option>
+                            </select>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <div class="color">
+                          <button type="button" class="btn btn-primary">
+                            Save
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <!-- add-color modal -->
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
                   <label for="">show</label>
@@ -4707,24 +5505,135 @@
                       <td>Grey</td>
                       <td><span class="badge bg-success">active</span></td>
                       <td class="float-end">
+                        <!-- delete-color-modal -->
                         <button
                           type="button"
                           class="btn btn-danger"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete-color-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-trash"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="delete-color-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  System Alert!
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                Are you sure delete this data?
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Cancel
+                                </button>
+                                <div class="color">
+                                  <button type="button" class="btn btn-danger">
+                                    Sure
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- delete-color-modal -->
+                        <!-- update-color-modal -->
                         <button
                           type="button"
                           class="btn btn-warning"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Update"
+                          data-bs-toggle="modal"
+                          data-bs-target="#update-color-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-pen-to-square"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="update-color-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Update Article
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label">Size</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label">Detail</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputPosition" class="form-label"
+                                      >Status</label
+                                    >
+                                    <select id="inputPosition" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>active</option>
+                                      <option>none-active</option>
+                                    </select>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <div class="color">
+                                  <button type="button" class="btn btn-warning">
+                                    Save
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- update-color-modal -->
                       </td>
                     </tr>
                     <tr>
@@ -4733,24 +5642,135 @@
                       <td>Crem</td>
                       <td><span class="badge bg-success">active</span></td>
                       <td class="float-end">
+                        <!-- delete-size-modal -->
                         <button
                           type="button"
                           class="btn btn-danger"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete-size-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-trash"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="delete-size-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  System Alert!
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                Are you sure delete this data?
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Cancel
+                                </button>
+                                <div class="size">
+                                  <button type="button" class="btn btn-danger">
+                                    Sure
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- delete-size-modal -->
+                        <!-- update-size-modal -->
                         <button
                           type="button"
                           class="btn btn-warning"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Update"
+                          data-bs-toggle="modal"
+                          data-bs-target="#update-size-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-pen-to-square"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="update-size-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Update Article
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label">Size</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label">Detail</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputPosition" class="form-label"
+                                      >Status</label
+                                    >
+                                    <select id="inputPosition" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>active</option>
+                                      <option>none-active</option>
+                                    </select>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <div class="size">
+                                  <button type="button" class="btn btn-warning">
+                                    Save
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- update-size-modal -->
                       </td>
                     </tr>
                   </tbody>
