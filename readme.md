@@ -1,6 +1,6 @@
 # Atson Group Website
 
-![Atson Group Logo](path/to/assets/img/mockup/ag_logo.png)
+![Atson Group Logo](assets/img/mockup/ag_logo.png)
 
 ## Deskripsi Proyek
 
@@ -12,27 +12,27 @@ Berikut beberapa gambar mockup dari proyek ini:
 
 1. Login Admin
 
-   ![Login Admin](path/to/assets/img/mockup/login-admin-page.png)
+   ![Login Admin](assets/img/mockup/login-admin-page.png)
 
 2. Dashboard Admin
 
-   ![Dashboard Admin](path/to/assets/img/mockup/dashboard-admin-page.png)
+   ![Dashboard Admin](assets/img/mockup/dashboard-admin-page.png)
 
 3. Login Customer
 
-   ![Login Customer](path/to/assets/img/mockup/login-customer-page.png)
+   ![Login Customer](assets/img/mockup/login-customer-page.png)
 
 4. Dashboard Customer
 
-   ![Dashboard Customer](path/to/assets/img/mockup/dashboard-customer-page.png)
+   ![Dashboard Customer](assets/img/mockup/dashboard-customer-page.png)
 
 5. Landing Page
 
-   ![Landing Page](path/to/assets/img/mockup/landing-page.png)
+   ![Landing Page](assets/img/mockup/landing-page.png)
 
 6. Catalog Product
 
-   ![Catalog Product](path/to/assets/img/mockup/catalog-page.png)
+   ![Catalog Product](assets/img/mockup/catalog-page.png)
 
 ## Penulis
 
