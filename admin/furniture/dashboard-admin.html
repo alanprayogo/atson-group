@@ -2049,15 +2049,138 @@
                   <h4>Bank</h4>
                 </div>
               </div>
+              <!-- add-bank-modal -->
               <div class="row justify-content-end mt-3 me-3">
                 <button
                   type="button"
                   class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#add-bank-Modal"
+                  data-bs-whatever="@mdo"
                   style="width: 12rem"
                 >
                   <i class="fa-solid fa-plus"></i> Add Bank
                 </button>
+                <div
+                  class="modal fade"
+                  id="add-bank-Modal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Add bank
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="row g-3">
+                          <div class="col-md-6">
+                            <label for="id" class="form-label">Bank</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputID"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="id" class="form-label">ID User</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputID"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="Rekeningname" class="form-label"
+                              >Rekening Name</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputRekeningname"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="rekeningname" class="form-label"
+                              >Rekening number</label
+                            >
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="inputRekeningnumber"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label"
+                              >Email</label
+                            >
+                            <input
+                              type="email"
+                              class="form-control"
+                              id="inputEmail4"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPhone" class="form-label"
+                              >Phone</label
+                            >
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="inputPhone"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputAddress" class="form-label"
+                              >Address</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputAddress"
+                              placeholder="1234 Main St"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPosition" class="form-label"
+                              >Status</label
+                            >
+                            <select id="inputPosition" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>active</option>
+                              <option>none-active</option>
+                            </select>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <div class="bank">
+                          <button type="button" class="btn btn-primary">
+                            Save
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <!-- add-bank modal -->
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
                   <label for="">show</label>
@@ -2104,24 +2227,195 @@
                       <td>135792468</td>
                       <td><span class="badge bg-success">active</span></td>
                       <td class="float-end">
+                        <!-- delete-bank-modal -->
                         <button
                           type="button"
                           class="btn btn-danger"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete-bank-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-trash"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="delete-bank-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  System Alert!
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                Are you sure delete this data?
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Cancel
+                                </button>
+                                <div class="bank">
+                                  <button type="button" class="btn btn-danger">
+                                    Sure
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- delete-bank-modal -->
+                        <!-- update-bank-modal -->
                         <button
                           type="button"
                           class="btn btn-warning"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Update"
+                          data-bs-toggle="modal"
+                          data-bs-target="#update-bank-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-pen-to-square"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="update-bank-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Update Admin
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label"
+                                      >Bank</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label"
+                                      >ID User</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="Rekeningname" class="form-label"
+                                      >Rekening Name</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputRekeningname"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="rekeningname" class="form-label"
+                                      >Rekening number</label
+                                    >
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      id="inputRekeningnumber"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label"
+                                      >Email</label
+                                    >
+                                    <input
+                                      type="email"
+                                      class="form-control"
+                                      id="inputEmail4"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputPhone" class="form-label"
+                                      >Phone</label
+                                    >
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      id="inputPhone"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputAddress" class="form-label"
+                                      >Address</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputAddress"
+                                      placeholder="1234 Main St"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label
+                                      for="inputPosition"
+                                      class="form-label"
+                                      >Status</label
+                                    >
+                                    <select
+                                      id="inputPosition"
+                                      class="form-select"
+                                    >
+                                      <option selected>Choose...</option>
+                                      <option>active</option>
+                                      <option>none-active</option>
+                                    </select>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <div class="bank">
+                                  <button type="button" class="btn btn-warning">
+                                    Save
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- update-bank-modal -->
                       </td>
                     </tr>
                   </tbody>
@@ -2180,15 +2474,138 @@
                   <h4>e-Wallet</h4>
                 </div>
               </div>
+              <!-- add-wallet-modal -->
               <div class="row justify-content-end mt-3 me-3">
                 <button
                   type="button"
                   class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#add-wallet-Modal"
+                  data-bs-whatever="@mdo"
                   style="width: 12rem"
                 >
                   <i class="fa-solid fa-plus"></i> Add E-Wallet
                 </button>
+                <div
+                  class="modal fade"
+                  id="add-wallet-Modal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Add Wallet
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="row g-3">
+                          <div class="col-md-6">
+                            <label for="id" class="form-label">E-Wallet</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputID"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="id" class="form-label">ID User</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputID"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="Rekeningname" class="form-label"
+                              >Rekening Name</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputRekeningname"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="rekeningname" class="form-label"
+                              >Rekening number</label
+                            >
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="inputRekeningnumber"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label"
+                              >Email</label
+                            >
+                            <input
+                              type="email"
+                              class="form-control"
+                              id="inputEmail4"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPhone" class="form-label"
+                              >Phone</label
+                            >
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="inputPhone"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputAddress" class="form-label"
+                              >Address</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputAddress"
+                              placeholder="1234 Main St"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPosition" class="form-label"
+                              >Status</label
+                            >
+                            <select id="inputPosition" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>active</option>
+                              <option>none-active</option>
+                            </select>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <div class="wallet">
+                          <button type="button" class="btn btn-primary">
+                            Save
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <!-- add-wallet modal -->
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
                   <label for="">show</label>
@@ -2221,7 +2638,7 @@
                 <table class="table">
                   <thead>
                     <tr>
-                      <th scope="col">Bank</th>
+                      <th scope="col">E-wallet</th>
                       <th scope="col">Rekening Name</th>
                       <th scope="col">Rekening Number</th>
                       <th scope="col">Status</th>
@@ -2235,24 +2652,195 @@
                       <td>309108135792468</td>
                       <td><span class="badge bg-success">active</span></td>
                       <td class="float-end">
+                        <!-- delete-wallet-modal -->
                         <button
                           type="button"
                           class="btn btn-danger"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete-wallet-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-trash"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="delete-wallet-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  System Alert!
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                Are you sure delete this data?
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Cancel
+                                </button>
+                                <div class="wallet">
+                                  <button type="button" class="btn btn-danger">
+                                    Sure
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- delete-wallet-modal -->
+                        <!-- update-wallet-modal -->
                         <button
                           type="button"
                           class="btn btn-warning"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Update"
+                          data-bs-toggle="modal"
+                          data-bs-target="#update-wallet-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-pen-to-square"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="update-wallet-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Update E-Wallet
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label"
+                                      >E-Wallet</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label"
+                                      >ID User</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="Rekeningname" class="form-label"
+                                      >Rekening Name</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputRekeningname"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="rekeningname" class="form-label"
+                                      >Rekening number</label
+                                    >
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      id="inputRekeningnumber"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label"
+                                      >Email</label
+                                    >
+                                    <input
+                                      type="email"
+                                      class="form-control"
+                                      id="inputEmail4"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputPhone" class="form-label"
+                                      >Phone</label
+                                    >
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      id="inputPhone"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputAddress" class="form-label"
+                                      >Address</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputAddress"
+                                      placeholder="1234 Main St"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label
+                                      for="inputPosition"
+                                      class="form-label"
+                                      >Status</label
+                                    >
+                                    <select
+                                      id="inputPosition"
+                                      class="form-select"
+                                    >
+                                      <option selected>Choose...</option>
+                                      <option>active</option>
+                                      <option>none-active</option>
+                                    </select>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <div class="wallet">
+                                  <button type="button" class="btn btn-warning">
+                                    Save
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- update-wallet-modal -->
                       </td>
                     </tr>
                   </tbody>
@@ -2311,15 +2899,180 @@
                   <h4>Position Access</h4>
                 </div>
               </div>
+              <!-- add-position-modal -->
               <div class="row justify-content-end mt-3 me-3">
                 <button
                   type="button"
                   class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#add-position-Modal"
+                  data-bs-whatever="@mdo"
                   style="width: 12rem"
                 >
                   <i class="fa-solid fa-plus"></i> Add Position
                 </button>
+                <div
+                  class="modal fade"
+                  id="add-position-Modal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Add Position
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="row g-3">
+                          <div class="col-md-6">
+                            <label for="id" class="form-label"
+                              >Position Name</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputID"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPosition" class="form-label"
+                              >Access</label
+                            >
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckDefault"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexCheckDefault"
+                              >
+                                Dashboard
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexCheckChecked"
+                              >
+                                Data
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexCheckChecked"
+                              >
+                                Master
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexCheckChecked"
+                              >
+                                Category
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexCheckChecked"
+                              >
+                                Stok
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexCheckChecked"
+                              >
+                                Transaction
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexCheckChecked"
+                              >
+                                Settings
+                              </label>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <div class="position">
+                          <button type="button" class="btn btn-primary">
+                            Save
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <!-- add-position modal -->
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
                   <label for="">show</label>
@@ -2370,24 +3123,230 @@
                         setting | change password, biodata, attendace history
                       </td>
                       <td class="float-end">
+                        <!-- delete-position-modal -->
                         <button
                           type="button"
                           class="btn btn-danger"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete-position-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-trash"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="delete-position-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  System Alert!
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                Are you sure delete this data?
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Cancel
+                                </button>
+                                <div class="position">
+                                  <button type="button" class="btn btn-danger">
+                                    Sure
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- delete-position-modal -->
+                        <!-- update-position-modal -->
                         <button
                           type="button"
                           class="btn btn-warning"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Update"
+                          data-bs-toggle="modal"
+                          data-bs-target="#update-position-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-pen-to-square"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="update-position-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Update Position
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label"
+                                      >Position Name</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label
+                                      for="inputPosition"
+                                      class="form-label"
+                                      >Access</label
+                                    >
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckDefault"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckDefault"
+                                      >
+                                        Dashboard
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Data
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Master
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Category
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Stok
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Transaction
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Settings
+                                      </label>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <div class="position">
+                                  <button type="button" class="btn btn-warning">
+                                    Save
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- update-position-modal -->
                       </td>
                     </tr>
                     <tr>
@@ -2402,24 +3361,230 @@
                         setting | change password, biodata, attendace history
                       </td>
                       <td class="float-end">
+                        <!-- delete-position-modal -->
                         <button
                           type="button"
                           class="btn btn-danger"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete-position-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-trash"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="delete-position-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  System Alert!
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                Are you sure delete this data?
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Cancel
+                                </button>
+                                <div class="position">
+                                  <button type="button" class="btn btn-danger">
+                                    Sure
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- delete-position-modal -->
+                        <!-- update-position-modal -->
                         <button
                           type="button"
                           class="btn btn-warning"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Update"
+                          data-bs-toggle="modal"
+                          data-bs-target="#update-position-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-pen-to-square"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="update-position-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Update Position
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label"
+                                      >Position Name</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label
+                                      for="inputPosition"
+                                      class="form-label"
+                                      >Access</label
+                                    >
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckDefault"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckDefault"
+                                      >
+                                        Dashboard
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Data
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Master
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Category
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Stok
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Transaction
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Settings
+                                      </label>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <div class="position">
+                                  <button type="button" class="btn btn-warning">
+                                    Save
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- update-position-modal -->
                       </td>
                     </tr>
                     <tr>
@@ -2432,24 +3597,230 @@
                         biodata, attendace history
                       </td>
                       <td class="float-end">
+                        <!-- delete-position-modal -->
                         <button
                           type="button"
                           class="btn btn-danger"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete-position-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-trash"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="delete-position-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  System Alert!
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                Are you sure delete this data?
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Cancel
+                                </button>
+                                <div class="position">
+                                  <button type="button" class="btn btn-danger">
+                                    Sure
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- delete-position-modal -->
+                        <!-- update-position-modal -->
                         <button
                           type="button"
                           class="btn btn-warning"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Update"
+                          data-bs-toggle="modal"
+                          data-bs-target="#update-position-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-pen-to-square"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="update-position-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Update Position
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label"
+                                      >Position Name</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label
+                                      for="inputPosition"
+                                      class="form-label"
+                                      >Access</label
+                                    >
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckDefault"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckDefault"
+                                      >
+                                        Dashboard
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Data
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Master
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Category
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Stok
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Transaction
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="flexCheckChecked"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexCheckChecked"
+                                      >
+                                        Settings
+                                      </label>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <div class="position">
+                                  <button type="button" class="btn btn-warning">
+                                    Save
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- update-position-modal -->
                       </td>
                     </tr>
                   </tbody>
@@ -2508,15 +3879,100 @@
                   <h4>Article</h4>
                 </div>
               </div>
+              <!-- add-article-modal -->
               <div class="row justify-content-end mt-3 me-3">
                 <button
                   type="button"
                   class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#add-article-Modal"
+                  data-bs-whatever="@mdo"
                   style="width: 12rem"
                 >
                   <i class="fa-solid fa-plus"></i> Add Article
                 </button>
+                <div
+                  class="modal fade"
+                  id="add-article-Modal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Add Article
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="row g-3">
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label for="formFile" class="form-label">Article Image</label>
+                              <input class="form-control" type="file" id="formFile">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="articletitle" class="form-label"
+                              >Article Title</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputArticletitle"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPosition" class="form-label"
+                              >Article Category</label
+                            >
+                            <select id="inputPosition" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>Main Article</option>
+                              <option>Company News</option>
+                              <option>Factory News</option>
+                              <option>Boutique News</option>
+                              <option>Garden News</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPosition" class="form-label"
+                              >Status</label
+                            >
+                            <select id="inputPosition" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>active</option>
+                              <option>none-active</option>
+                            </select>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <div class="article">
+                          <button type="button" class="btn btn-primary">
+                            Save
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <!-- add-article modal -->
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
                   <label for="">show</label>
@@ -2569,24 +4025,158 @@
                       <td>company-news</td>
                       <td><span class="badge bg-success">active</span></td>
                       <td class="float-end">
+                        <!-- delete-position-modal -->
                         <button
                           type="button"
                           class="btn btn-danger"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete-article-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-trash"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="delete-article-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  System Alert!
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                Are you sure delete this data?
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Cancel
+                                </button>
+                                <div class="article">
+                                  <button type="button" class="btn btn-danger">
+                                    Sure
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- delete-article-modal -->
+                        <!-- update-article-modal -->
                         <button
                           type="button"
                           class="btn btn-warning"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Update"
+                          data-bs-toggle="modal"
+                          data-bs-target="#update-article-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-pen-to-square"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="update-article-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Update Article
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <div class="mb-3">
+                                      <label for="formFile" class="form-label">Article Image</label>
+                                      <input class="form-control" type="file" id="formFile">
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="articletitle" class="form-label"
+                                      >Article Title</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputArticletitle"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label
+                                      for="inputPosition"
+                                      class="form-label"
+                                      >Article Category</label
+                                    >
+                                    <select
+                                      id="inputPosition"
+                                      class="form-select"
+                                    >
+                                      <option selected>Choose...</option>
+                                      <option>Main Article</option>
+                                      <option>Company News</option>
+                                      <option>Factory News</option>
+                                      <option>Boutique News</option>
+                                      <option>Garden News</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label
+                                      for="inputPosition"
+                                      class="form-label"
+                                      >Status</label
+                                    >
+                                    <select
+                                      id="inputPosition"
+                                      class="form-select"
+                                    >
+                                      <option selected>Choose...</option>
+                                      <option>active</option>
+                                      <option>none-active</option>
+                                    </select>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <div class="article">
+                                  <button type="button" class="btn btn-warning">
+                                    Save
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- update-article-modal -->
                       </td>
                     </tr>
                   </tbody>
