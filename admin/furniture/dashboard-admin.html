@@ -1220,6 +1220,7 @@
                   <h4>Admin</h4>
                 </div>
               </div>
+              <!-- add-admin-modal -->
               <div class="row justify-content-end mt-3 me-3">
                 <button
                   type="button"
@@ -1231,7 +1232,6 @@
                 >
                   <i class="fa-solid fa-plus"></i> Add Admin
                 </button>
-                <!-- add-admin modal -->
                 <div
                   class="modal fade"
                   id="add-admin-Modal"
@@ -1347,41 +1347,12 @@
                         <button type="button" class="btn btn-primary">
                           Save
                         </button>
-
-                        <script>
-                          // Menangkap tombol "Save"
-                          const saveButton = document.querySelector(
-                            ".modal-footer button.btn-primary"
-                          );
-                    
-                          // Menambahkan event listener untuk meng-handle klik tombol "Save"
-                          saveButton.addEventListener("click", function () {
-                            // Menutup modal
-                            $("#add-admin-Modal").modal("hide");
-                    
-                            // Menampilkan alert success
-                            const alertSuccess = `
-                              <div class="alert alert-success alert-dismissible fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
-                                Data saved successfully
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                              </div>
-                            `;
-                    
-                            // Menambahkan alert success ke dalam body
-                            document.body.insertAdjacentHTML("beforeend", alertSuccess);
-                    
-                            // Menghilangkan alert setelah 3 detik
-                            setTimeout(function () {
-                              $(".alert").alert("close");
-                            }, 4000);
-                          });
-                        </script>
                       </div>
                     </div>
                   </div>
                 </div>
-                <!-- add-admin modal -->
               </div>
+              <!-- add-admin modal -->
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
                   <label for="">show</label>
@@ -1430,36 +1401,275 @@
                       <td>loidforger@gmail.com</td>
                       <td>Furniture Manager</td>
                       <td class="float-end">
+                        <!-- delete-admin-modal -->
                         <button
                           type="button"
                           class="btn btn-danger"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Delete"
                           data-bs-toggle="modal"
-                          data-bs-target="#modalDelete"
-                          onclick="showModal()"
+                          data-bs-target="#delete-admin-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-trash"></i>
-                        </button> 
+                        </button>
+                        <div
+                          class="modal fade"
+                          id="delete-admin-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  System Alert!
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                Are you sure delete this data?
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Cancel
+                                </button>
+                                <button type="button" class="btn btn-danger">
+                                  Sure
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- delete-admin-modal -->
+                        <!-- update-admin-modal -->
                         <button
                           type="button"
                           class="btn btn-warning"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Update"
+                          data-bs-toggle="modal"
+                          data-bs-target="#update-admin-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-pen-to-square"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="update-admin-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Update Admin
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label"
+                                      >ID</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="fullname" class="form-label"
+                                      >Fullname</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputFullname"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="username" class="form-label"
+                                      >Username</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputUsername"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label
+                                      for="inputPassword"
+                                      class="form-label"
+                                      >Password</label
+                                    >
+                                    <input
+                                      type="password"
+                                      class="form-control"
+                                      id="inputPassword"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label"
+                                      >Email</label
+                                    >
+                                    <input
+                                      type="email"
+                                      class="form-control"
+                                      id="inputEmail4"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputPhone" class="form-label"
+                                      >Phone</label
+                                    >
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      id="inputPhone"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputAddress" class="form-label"
+                                      >Address</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputAddress"
+                                      placeholder="1234 Main St"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label
+                                      for="inputPosition"
+                                      class="form-label"
+                                      >Position</label
+                                    >
+                                    <select
+                                      id="inputPosition"
+                                      class="form-select"
+                                    >
+                                      <option selected>Choose...</option>
+                                      <option>CEO</option>
+                                      <option>Furniture Manager</option>
+                                      <option>HR Manager</option>
+                                    </select>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <button type="button" class="btn btn-warning">
+                                  Save
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- update-admin-modal -->
+                        <!-- view-admin-modal -->
                         <button
                           type="button"
                           class="btn btn-info"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="View"
+                          data-bs-toggle="modal"
+                          data-bs-target="#view-admin-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-eye"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="view-admin-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  View Admin
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <table class="table">
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">ID</th>
+                                      <td>FFM-001</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Fullname</th>
+                                      <td>Loid Forger</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Username</th>
+                                      <td>loid</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Password</th>
+                                      <td>********</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Position</th>
+                                      <td>Furniture Manager</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Email</th>
+                                      <td>loidforger@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Phone</th>
+                                      <td>085791174251</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Address</th>
+                                      <td>Airlangga Street no.2, Surabaya</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-info"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- view-admin-modal -->
                       </td>
                     </tr>
                   </tbody>
@@ -1564,15 +1774,223 @@
                       <td>yorforger@gmail.com</td>
                       <td><span class="badge bg-success">active</span></td>
                       <td class="float-end">
+                        <!-- update-user-modal -->
+                        <button
+                          type="button"
+                          class="btn btn-warning"
+                          data-bs-toggle="modal"
+                          data-bs-target="#update-user-Modal"
+                          data-bs-whatever="@mdo"
+                        >
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                        <div
+                          class="modal fade"
+                          id="update-user-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Update User
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="id" class="form-label"
+                                      >ID</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputID"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="fullname" class="form-label"
+                                      >Fullname</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputFullname"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="username" class="form-label"
+                                      >Username</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputUsername"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label
+                                      for="inputPassword"
+                                      class="form-label"
+                                      >Password</label
+                                    >
+                                    <input
+                                      type="password"
+                                      class="form-control"
+                                      id="inputPassword"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label"
+                                      >Email</label
+                                    >
+                                    <input
+                                      type="email"
+                                      class="form-control"
+                                      id="inputEmail4"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputPhone" class="form-label"
+                                      >Phone</label
+                                    >
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      id="inputPhone"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputAddress" class="form-label"
+                                      >Address</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="inputAddress"
+                                      placeholder="1234 Main St"
+                                    />
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label
+                                      for="inputPosition"
+                                      class="form-label"
+                                      >Status</label
+                                    >
+                                    <select
+                                      id="inputPosition"
+                                      class="form-select"
+                                    >
+                                      <option selected>Choose...</option>
+                                      <option>active</option>
+                                      <option>non-active</option>
+                                    </select>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <div class="user">
+                                  <button type="button" class="btn btn-warning">
+                                    Save
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- update-user-modal -->
+                        <!-- view-user-modal -->
                         <button
                           type="button"
                           class="btn btn-info"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="View"
+                          data-bs-toggle="modal"
+                          data-bs-target="#view-user-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-eye"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="view-user-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  View User
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <table class="table">
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">ID</th>
+                                      <td>USER-001</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Fullname</th>
+                                      <td>Yor Forger</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Username</th>
+                                      <td>yor</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Password</th>
+                                      <td>********</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Email</th>
+                                      <td>yorforger@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Phone</th>
+                                      <td>085791174251</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Address</th>
+                                      <td>Airlangga Street no.2, Surabaya</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-info"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- view-user-modal -->
                       </td>
                     </tr>
                   </tbody>
@@ -3875,6 +4293,5 @@
     <!-- Custom Script -->
 
     <!-- Tambahkan skrip JavaScript di bawah modal-footer -->
-   
   </body>
 </html>
