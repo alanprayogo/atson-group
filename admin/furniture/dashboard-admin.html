@@ -1198,11 +1198,15 @@
                 <div class="col-2">
                   <h4>Admin</h4>
                 </div>
-                <div class="col-1">
-                  <a class="text-decoration-none" href=""
-                    ><i class="fa-solid fa-plus"></i> Add</a
-                  >
-                </div>
+              </div>
+              <div class="row justify-content-end mt-3 me-3">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 12rem"
+                >
+                  <i class="fa-solid fa-plus"></i> Add Admin
+                </button>
               </div>
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
@@ -1236,21 +1240,21 @@
                 <table class="table">
                   <thead>
                     <tr>
-                      <th scope="col">No</th>
+                      <th scope="col">ID</th>
                       <th scope="col">Fullname</th>
                       <th scope="col">Username</th>
+                      <th scope="col">Email</th>
                       <th scope="col">Akses</th>
-                      <th scope="col">Date</th>
                       <th class="float-end" scope="col">Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">1</th>
+                      <th scope="row">FFM-001</th>
                       <td>Loid Forger</td>
                       <td>loid</td>
+                      <td>loidforger@gmail.com</td>
                       <td>Furniture Manager</td>
-                      <td>24 Januari 2023</td>
                       <td class="float-end">
                         <button type="button" class="btn btn-danger">
                           <i class="fa-solid fa-trash"></i>
@@ -1422,11 +1426,15 @@
                 <div class="col-2">
                   <h4>Bank</h4>
                 </div>
-                <div class="col-1">
-                  <a class="text-decoration-none" href=""
-                    ><i class="fa-solid fa-plus"></i> Add</a
-                  >
-                </div>
+              </div>
+              <div class="row justify-content-end mt-3 me-3">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 12rem"
+                >
+                  <i class="fa-solid fa-plus"></i> Add Bank
+                </button>
               </div>
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
@@ -1537,11 +1545,15 @@
                 <div class="col-2">
                   <h4>e-Wallet</h4>
                 </div>
-                <div class="col-1">
-                  <a class="text-decoration-none" href=""
-                    ><i class="fa-solid fa-plus"></i> Add</a
-                  >
-                </div>
+              </div>
+              <div class="row justify-content-end mt-3 me-3">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 12rem"
+                >
+                  <i class="fa-solid fa-plus"></i> Add E-Wallet
+                </button>
               </div>
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
@@ -1652,11 +1664,15 @@
                 <div class="col-3">
                   <h4>Position Access</h4>
                 </div>
-                <div class="col-1">
-                  <a class="text-decoration-none" href=""
-                    ><i class="fa-solid fa-plus"></i> Add</a
-                  >
-                </div>
+              </div>
+              <div class="row justify-content-end mt-3 me-3">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 12rem"
+                >
+                  <i class="fa-solid fa-plus"></i> Add Position
+                </button>
               </div>
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
@@ -1691,14 +1707,60 @@
                   <thead>
                     <tr>
                       <th scope="col">No</th>
-                      <th scope="col">Access Name</th>
+                      <th scope="col">Position Name</th>
+                      <th scope="col">Access</th>
                       <th class="float-end" scope="col">Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <th scope="row">1</th>
-                      <th scope="row">Furniture Manager</th>
+                      <td>CEO</td>
+                      <td>
+                        dashboard <br />
+                        data | all <br />
+                        stok | product, history opname <br />
+                        transaction | all <br />
+                        setting | change password, biodata, attendace history
+                      </td>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-danger">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Furniture Manager</td>
+                      <td>
+                        dashboard <br />
+                        data | all <br />
+                        category | all <br />
+                        stok | all <br />
+                        transaction | all <br />
+                        setting | change password, biodata, attendace history
+                      </td>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-danger">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>HR Manager</td>
+                      <td>
+                        dashboard <br />
+                        data | all <br />
+                        master | position access setting | change password,
+                        biodata, attendace history
+                      </td>
                       <td class="float-end">
                         <button type="button" class="btn btn-danger">
                           <i class="fa-solid fa-trash"></i>
@@ -1763,11 +1825,15 @@
                 <div class="col-2">
                   <h4>Article</h4>
                 </div>
-                <div class="col-1">
-                  <a class="text-decoration-none" href=""
-                    ><i class="fa-solid fa-plus"></i> Add</a
-                  >
-                </div>
+              </div>
+              <div class="row justify-content-end mt-3 me-3">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 12rem"
+                >
+                  <i class="fa-solid fa-plus"></i> Add Article
+                </button>
               </div>
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
@@ -1884,11 +1950,15 @@
                 <div class="col-2">
                   <h4>Category</h4>
                 </div>
-                <div class="col-1">
-                  <a class="text-decoration-none" href=""
-                    ><i class="fa-solid fa-plus"></i> Add</a
-                  >
-                </div>
+              </div>
+              <div class="row justify-content-end mt-3 me-3">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 12rem"
+                >
+                  <i class="fa-solid fa-plus"></i> Add Category
+                </button>
               </div>
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
@@ -2002,11 +2072,15 @@
                 <div class="col-2">
                   <h4>Sub Category</h4>
                 </div>
-                <div class="col-1">
-                  <a class="text-decoration-none" href=""
-                    ><i class="fa-solid fa-plus"></i> Add</a
-                  >
-                </div>
+              </div>
+              <div class="row justify-content-end mt-3 me-3">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 12rem"
+                >
+                  <i class="fa-solid fa-plus"></i> Add Sub Category
+                </button>
               </div>
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
@@ -2123,11 +2197,15 @@
                 <div class="col-2">
                   <h4>Size</h4>
                 </div>
-                <div class="col-1">
-                  <a class="text-decoration-none" href=""
-                    ><i class="fa-solid fa-plus"></i> Add</a
-                  >
-                </div>
+              </div>
+              <div class="row justify-content-end mt-3 me-3">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 12rem"
+                >
+                  <i class="fa-solid fa-plus"></i> Add Size
+                </button>
               </div>
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
@@ -2241,11 +2319,15 @@
                 <div class="col-2">
                   <h4>Color</h4>
                 </div>
-                <div class="col-1">
-                  <a class="text-decoration-none" href=""
-                    ><i class="fa-solid fa-plus"></i> Add</a
-                  >
-                </div>
+              </div>
+              <div class="row justify-content-end mt-3 me-3">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 12rem"
+                >
+                  <i class="fa-solid fa-plus"></i> Add Color
+                </button>
               </div>
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
@@ -2370,11 +2452,15 @@
                 <div class="col-2">
                   <h4>Product</h4>
                 </div>
-                <div class="col-1">
-                  <a class="text-decoration-none" href=""
-                    ><i class="fa-solid fa-plus"></i> Add</a
-                  >
-                </div>
+              </div>
+              <div class="row justify-content-end mt-3 me-3">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 12rem"
+                >
+                  <i class="fa-solid fa-plus"></i> Add Product
+                </button>
               </div>
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
@@ -2491,11 +2577,15 @@
                 <div class="col-2">
                   <h4>Opname</h4>
                 </div>
-                <div class="col-1">
-                  <a class="text-decoration-none" href=""
-                    ><i class="fa-solid fa-check"></i> Save</a
-                  >
-                </div>
+              </div>
+              <div class="row justify-content-end mt-3 me-3">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 12rem"
+                >
+                  <i class="fa-solid fa-plus"></i> Add Opname
+                </button>
               </div>
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
@@ -2817,7 +2907,6 @@
                   <h4>History Transaction</h4>
                 </div>
               </div>
-              <div class="row px-2 mt-2 d-flex justify-content-between"></div>
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
                   <label for="">show</label>
@@ -2833,7 +2922,7 @@
                   <label for="">entities</label>
                 </div>
                 <div class="col-3 d-flex align-items-center">
-                  <label for="datepicker">Start Date: </label>
+                  <label for="datepicker">Start: </label>
                   <input
                     class="rounded p-2 mx-2"
                     type="date"
@@ -2842,7 +2931,7 @@
                   />
                 </div>
                 <div class="col-3 d-flex align-items-center">
-                  <label for="datepicker">End Date: </label>
+                  <label for="datepicker">End: </label>
                   <input
                     class="rounded p-2 mx-2"
                     type="date"
@@ -2874,18 +2963,22 @@
                       <th scope="col">Username</th>
                       <th scope="col">Date</th>
                       <th scope="col">Nominal</th>
-                      <th scope="col">Download Invoice</th>
+                      <th class="float-end" scope="col">Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <th scope="row">1</th>
-                      <th scope="row">2 unit Living Chair 1</th>
-                      <th scope="row">000213401674</th>
-                      <th scope="row">Yor Forger</th>
-                      <th scope="row">24 Januari 2024</th>
-                      <th scope="row">Rp. 9.198.000,-</th>
-                      <th scope="row"><a href="">Invoice</a></th>
+                      <td scope="row">2 unit Living Chair 1</td>
+                      <td scope="row">000213401674</td>
+                      <td scope="row">Yor Forger</td>
+                      <td scope="row">24 Januari 2024</td>
+                      <td scope="row">Rp. 9.198.000,-</td>
+                      <td class="float-end">
+                        <button type="button" class="btn btn-info">
+                          <i class="fa-solid fa-eye"></i>
+                        </button>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -2943,7 +3036,6 @@
                   <h4>Feedback</h4>
                 </div>
               </div>
-              <div class="row px-2 mt-2 d-flex justify-content-between"></div>
               <div class="row d-flex justify-content-between p-3">
                 <div class="col-2 d-flex align-items-center">
                   <label for="">show</label>
@@ -2977,25 +3069,23 @@
                   <thead>
                     <tr>
                       <th scope="col">No</th>
-                      <th scope="col">User Id</th>
                       <th scope="col">Username</th>
                       <th scope="col">Email</th>
                       <th scope="col">Date</th>
-                      <th scope="col">Ulasan</th>
+                      <th scope="col" style="width: 30rem">Feedback Message</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <th scope="row">1</th>
-                      <th scope="row">000213401674</th>
-                      <th scope="row">Yor Forger</th>
-                      <th scope="row">yorforger@gmail.com</th>
-                      <th scope="row">24 Januari 2024</th>
-                      <th scope="row">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Vel labore dignissimos consequuntur temporibus
-                        tempore culpa ab inventore laborum repellat. Et?
-                      </th>
+                      <td scope="row">Yor Forger</td>
+                      <td scope="row">yorforger@gmail.com</td>
+                      <td scope="row">24 Januari 2024</td>
+                      <td scope="row" style="width: 30rem">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quam aliquid eius necessitatibus labore quo facere
+                        consectetur aliquam mollitia autem accusantium!
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -3070,12 +3160,12 @@
                           data-bs-target="#exampleModal"
                           data-bs-whatever="@mdo"
                         >
-                          <i class="fa-solid fa-pen-to-square fa-xl"></i>
+                          <i class="fa-solid fa-eye"></i>
                         </button>
                       </div>
                     </div>
                     <div class="row">
-                      <p>loidforger@gmail.com</p>
+                      <p>Furniture Manager</p>
                     </div>
                   </div>
                 </div>
@@ -3128,95 +3218,59 @@
                 </div>
               </div>
               <!-- profile content -->
-              <!-- history-transaction content -->
+              <!-- settings content -->
               <div class="col-8 ps-4">
                 <div class="row border p-2">
                   <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                      <!-- biodata btn -->
                       <button
                         class="nav-link active"
-                        id="nav-history-transaction-tab"
+                        id="nav-biodata-tab"
                         data-bs-toggle="tab"
-                        data-bs-target="#nav-history-transaction"
+                        data-bs-target="#nav-biodata"
                         type="button"
                         role="tab"
-                        aria-controls="nav-history-transaction"
+                        aria-controls="nav-biodata"
                         aria-selected="true"
                       >
-                        History Transaction
+                        Biodata
                       </button>
+                      <!-- biodata btn -->
+                      <!-- attendance-history btn -->
                       <button
                         class="nav-link"
-                        id="nav-saved-address-tab"
+                        id="nav-attendance-history-tab"
                         data-bs-toggle="tab"
-                        data-bs-target="#nav-saved-address"
+                        data-bs-target="#nav-attendance-history"
                         type="button"
                         role="tab"
-                        aria-controls="nav-saved-address"
+                        aria-controls="nav-attendance-history"
                         aria-selected="false"
                       >
-                        Saved Address
+                        Attendance History
                       </button>
+                      <!-- attendance-history btn -->
                     </div>
                   </nav>
                 </div>
                 <div class="row border p-2 mt-2">
                   <div class="tab-content" id="nav-tabContent">
+                    <!-- biodata content -->
                     <div
                       class="tab-pane fade show active"
-                      id="nav-history-transaction"
+                      id="nav-biodata"
                       role="tabpanel"
-                      aria-labelledby="nav-history-transaction-tab"
-                    >
-                      <h5 class="fw-bold">History Transaction</h5>
-                      <table class="table">
-                        <thead style="background: #d6a4de">
-                          <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Transaction</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Invoice</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">FLC-001</th>
-                            <td>2 unit Living Chair</td>
-                            <td>13 Januari 2024</td>
-                            <td>
-                              <a
-                                href=""
-                                class="text-decoration-underline"
-                                style="color: blue"
-                                >Invoice</a
-                              >
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div
-                      class="tab-pane fade"
-                      id="nav-saved-address"
-                      role="tabpanel"
-                      aria-labelledby="nav-saved-address-tab"
+                      aria-labelledby="nav-biodata-tab"
                     >
                       <div class="row justify-content-between">
-                        <div class="col-4 mt-2">
-                          <h5 class="fw-bold">Saved Address</h5>
-                        </div>
-                        <div class="col-2">
-                          <a href="" class="fs-5" style="color: blue"
-                            ><i class="fa-solid fa-plus"></i> Address</a
-                          >
-                        </div>
                         <div class="container px-4 py-2">
                           <div
                             class="row justify-content-between rounded"
                             style="background: #d6a4de"
                           >
                             <div class="col-4 mt-2">
-                              <h6 class="fw-bold">Rumah</h6>
+                              <h5 class="fw-bold">Biodata</h5>
                             </div>
                             <div class="col-1">
                               <button
@@ -3229,22 +3283,162 @@
                                 <i class="fa-solid fa-pen-to-square"></i>
                               </button>
                             </div>
-                            <div class="address small">
-                              <p>Penerima : Yor Forger</p>
-                              <p>
-                                Jalan Airlangga No. 2, Jawa Timur, Surabaya -
-                                60119
-                              </p>
-                              <p>Nomor yang dapat dihubungi 085791174251</p>
+                            <div class="general small">
+                              <table class="table">
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">ID</th>
+                                    <td>FFM-001</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Fullname</th>
+                                    <td>Loid Forger</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Email</th>
+                                    <td>loidforger@gmail.com</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Phone</th>
+                                    <td>085791174251</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Address</th>
+                                    <td>Airlangga Street no.2, Surabaya</td>
+                                  </tr>
+                                </tbody>
+                              </table>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <!-- biodata content -->
+                    <!-- attendance-history content -->
+                    <div
+                      class="tab-pane fade"
+                      id="nav-attendance-history"
+                      role="tabpanel"
+                      aria-labelledby="nav-attendance-history-tab"
+                    >
+                      <h5 class="fw-bold">Attendace history</h5>
+                      <div class="row d-flex justify-content-between p-3">
+                        <div class="col-2 d-flex align-items-center">
+                          <label for="">show</label>
+                          <select
+                            class="form-select mx-2"
+                            aria-label="Default select example"
+                          >
+                            <option selected>10</option>
+                            <option value="1">25</option>
+                            <option value="2">50</option>
+                            <option value="3">100</option>
+                          </select>
+                          <label for="">entities</label>
+                        </div>
+                        <div class="col-10">
+                          <div class="row float-end">
+                            <div class="col-6 d-flex align-items-center">
+                              <label for="datepicker">Start: </label>
+                              <input
+                                class="rounded p-2 mx-2"
+                                type="date"
+                                id="datepicker"
+                                name="datepicker"
+                              />
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                              <label for="datepicker">End: </label>
+                              <input
+                                class="rounded p-2 mx-2"
+                                type="date"
+                                id="datepicker"
+                                name="datepicker"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <table class="table">
+                        <thead style="background: #d6a4de">
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Fullname</th>
+                            <th scope="col">Day</th>
+                            <th scope="col">Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">FFM-001</th>
+                            <td>Loid Forger</td>
+                            <td>Monday</td>
+                            <td>8 Januari 2024</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">FFM-001</th>
+                            <td>Loid Forger</td>
+                            <td>Tuesday</td>
+                            <td>9 Januari 2024</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">FFM-001</th>
+                            <td>Loid Forger</td>
+                            <td>Wednesday</td>
+                            <td>10 Januari 2024</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">FFM-001</th>
+                            <td>Loid Forger</td>
+                            <td>Thursday</td>
+                            <td>11 Januari 2024</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">FFM-001</th>
+                            <td>Loid Forger</td>
+                            <td>Friday</td>
+                            <td>12 Januari 2024</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="row d-flex justify-content-between p-3">
+                        <div class="col-6">
+                          <label for="">showing 1 to 1 of 1 entries</label>
+                        </div>
+                        <div class="col-6">
+                          <nav class="attendance-pagination" aria-label="...">
+                            <ul class="pagination justify-content-end">
+                              <li class="page-item disabled">
+                                <a
+                                  class="page-link"
+                                  href="#"
+                                  tabindex="-1"
+                                  aria-disabled="true"
+                                  >Previous</a
+                                >
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link" href="#">1</a>
+                              </li>
+                              <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2</a>
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- attendance-history content -->
                   </div>
                 </div>
               </div>
-              <!-- history-transaction content -->
+              <!-- settings content -->
             </div>
           </div>
         </div>

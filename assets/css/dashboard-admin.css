@@ -17,3 +17,10 @@ body {
 .content {
     margin-left: 14rem;
 }
+
+.attendance-pagination .pagination .page-item.active .page-link {
+    background-color: #d6a4de;
+    color: #000;
+    border-color: #000;
+  }
+  
