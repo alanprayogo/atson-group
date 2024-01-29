@@ -6393,7 +6393,9 @@
                             />
                           </div>
                           <div class="col-md-6">
-                            <label for="id" class="form-label">Information</label>
+                            <label for="id" class="form-label"
+                              >Information</label
+                            >
                             <input
                               type="text"
                               class="form-control"
@@ -6810,15 +6812,76 @@
                       <td scope="row">24 Januari 2024</td>
                       <td scope="row">Rp. 9.198.000,-</td>
                       <td class="float-end">
+                        <!-- view-history-transaction-modal -->
                         <button
                           type="button"
                           class="btn btn-info"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="View"
+                          data-bs-toggle="modal"
+                          data-bs-target="#view-history-transaction-Modal"
+                          data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-eye"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="view-history-transaction-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  View History Transaction
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <table class="table">
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">ID</th>
+                                      <td>TRANSACTION-001</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Date</th>
+                                      <td>2024-02-01</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Total Amount</th>
+                                      <td>$500.00</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Payment Method</th>
+                                      <td>Credit Card</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Status</th>
+                                      <td>Completed</td>
+                                    </tr>
+                                    <!-- Add more transaction details as needed -->
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-info"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- view-history-transaction-modal -->
                       </td>
                     </tr>
                   </tbody>
@@ -6994,26 +7057,73 @@
                         <h4 class="fw-bold">Loid Forger</h4>
                       </div>
                       <div class="col-3">
-                        <!-- <button
-                          type="button"
-                          class="btn"
-                          data-bs-toggle="modal"
-                          data-bs-target="#exampleModal"
-                          data-bs-whatever="@mdo"
-                        >
-                          <i class="fa-solid fa-eye"></i>
-                        </button> -->
+                        <!-- view-profile-position-modal -->
                         <button
                           type="button"
-                          class="btn"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="View"
-                          data-bs-target="#exampleModal"
+                          class="btn btn-info"
+                          data-bs-toggle="modal"
+                          data-bs-target="#view-profile-position-Modal"
                           data-bs-whatever="@mdo"
                         >
                           <i class="fa-solid fa-eye"></i>
                         </button>
+                        <div
+                          class="modal fade"
+                          id="view-profile-position-Modal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  View Access
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <table class="table">
+                                  <tbody>
+                                    <tr>
+                                      <td>dashboard</td>
+                                    </tr>
+                                    <tr>
+                                      <td>data | all</td>
+                                    </tr>
+                                    <tr>
+                                      <td>category | all</td>
+                                    </tr>
+                                    <tr>
+                                      <td>stok | all</td>
+                                    </tr>
+                                    <tr>
+                                      <td>transaction | all</td>
+                                    </tr>
+                                    <tr>
+                                      <td>setting | all</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-info"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- view-profile-position-modal -->
                       </div>
                     </div>
                     <div class="row">
@@ -7053,7 +7163,7 @@
                         />
                       </div>
                       <div class="col mb-2">
-                        <button
+                        <!-- <button
                           style="
                             background-color: #d6a4de;
                             width: 100%;
@@ -7061,6 +7171,19 @@
                           "
                           type="submit"
                           class="btn my-4"
+                          id="change-password-save"
+                        >
+                          <h4 class="fw-bold">Save</h4>
+                        </button> -->
+                        <button
+                          style="
+                            background-color: #d6a4de;
+                            width: 100%;
+                            padding: 0.5rem;
+                          "
+                          type="button"
+                          class="btn my-4"
+                          id="change-password-save"
                         >
                           <h4 class="fw-bold">Save</h4>
                         </button>
@@ -7125,26 +7248,163 @@
                               <h5 class="fw-bold">Biodata</h5>
                             </div>
                             <div class="col-1">
-                              <!-- <button
-                                type="button"
-                                class="btn"
-                                data-bs-toggle="modal"
-                                data-bs-target="#exampleModal"
-                                data-bs-whatever="@mdo"
-                              >
-                                <i class="fa-solid fa-pen-to-square"></i>
-                              </button> -->
+                              <!-- update-profile-admin-modal -->
                               <button
                                 type="button"
                                 class="btn"
-                                data-bs-toggle="tooltip"
-                                data-bs-placement="bottom"
-                                title="Update"
-                                data-bs-target="#exampleModal"
+                                data-bs-toggle="modal"
+                                data-bs-target="#update-profile-admin-Modal"
                                 data-bs-whatever="@mdo"
                               >
                                 <i class="fa-solid fa-pen-to-square"></i>
                               </button>
+                              <div
+                                class="modal fade"
+                                id="update-profile-admin-Modal"
+                                tabindex="-1"
+                                aria-labelledby="exampleModalLabel"
+                                aria-hidden="true"
+                              >
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5
+                                        class="modal-title"
+                                        id="exampleModalLabel"
+                                      >
+                                        Update Admin
+                                      </h5>
+                                      <button
+                                        type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                      ></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <form class="row g-3">
+                                        <div class="col-md-6">
+                                          <label for="id" class="form-label"
+                                            >ID</label
+                                          >
+                                          <input
+                                            type="text"
+                                            class="form-control"
+                                            id="inputID"
+                                          />
+                                        </div>
+                                        <div class="col-md-6">
+                                          <label
+                                            for="fullname"
+                                            class="form-label"
+                                            >Fullname</label
+                                          >
+                                          <input
+                                            type="text"
+                                            class="form-control"
+                                            id="inputFullname"
+                                          />
+                                        </div>
+                                        <div class="col-md-6">
+                                          <label
+                                            for="username"
+                                            class="form-label"
+                                            >Username</label
+                                          >
+                                          <input
+                                            type="text"
+                                            class="form-control"
+                                            id="inputUsername"
+                                          />
+                                        </div>
+                                        <div class="col-md-6">
+                                          <label
+                                            for="inputPassword"
+                                            class="form-label"
+                                            >Password</label
+                                          >
+                                          <input
+                                            type="password"
+                                            class="form-control"
+                                            id="inputPassword"
+                                          />
+                                        </div>
+                                        <div class="col-md-6">
+                                          <label
+                                            for="inputEmail4"
+                                            class="form-label"
+                                            >Email</label
+                                          >
+                                          <input
+                                            type="email"
+                                            class="form-control"
+                                            id="inputEmail4"
+                                          />
+                                        </div>
+                                        <div class="col-md-6">
+                                          <label
+                                            for="inputPhone"
+                                            class="form-label"
+                                            >Phone</label
+                                          >
+                                          <input
+                                            type="number"
+                                            class="form-control"
+                                            id="inputPhone"
+                                          />
+                                        </div>
+                                        <div class="col-md-6">
+                                          <label
+                                            for="inputAddress"
+                                            class="form-label"
+                                            >Address</label
+                                          >
+                                          <input
+                                            type="text"
+                                            class="form-control"
+                                            id="inputAddress"
+                                            placeholder="1234 Main St"
+                                          />
+                                        </div>
+                                        <div class="col-md-6">
+                                          <label
+                                            for="inputPosition"
+                                            class="form-label"
+                                            >Position</label
+                                          >
+                                          <select
+                                            id="inputPosition"
+                                            class="form-select"
+                                          >
+                                            <option selected>Choose...</option>
+                                            <option>CEO</option>
+                                            <option>Furniture Manager</option>
+                                            <option>HR Manager</option>
+                                          </select>
+                                        </div>
+                                      </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button
+                                        type="button"
+                                        class="btn btn-secondary"
+                                        data-bs-dismiss="modal"
+                                      >
+                                        Close
+                                      </button>
+                                      <div class="profile-admin">
+                                        <button
+                                          type="button"
+                                          class="btn btn-warning"
+                                        >
+                                          Save
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- update-profile-admin-modal -->
                             </div>
                             <div class="general small">
                               <table class="table">

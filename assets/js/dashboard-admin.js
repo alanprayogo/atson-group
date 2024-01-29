@@ -65,7 +65,7 @@ saveButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // delete-admin
@@ -90,7 +90,7 @@ deleteButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // update-admin
@@ -115,7 +115,7 @@ updateButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // update-user
@@ -140,7 +140,7 @@ updateuserButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // add-bank
@@ -165,7 +165,7 @@ savebankButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // delete-bank
@@ -190,7 +190,7 @@ deletebankButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // update-user
@@ -215,7 +215,7 @@ updatebankButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // add-wallet
@@ -240,7 +240,7 @@ savewalletButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // delete-wallet
@@ -265,7 +265,7 @@ deletewalletButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // update-wallet
@@ -290,11 +290,13 @@ updatewalletButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // add-position
-const savepositionButton = document.querySelector(".position button.btn-primary");
+const savepositionButton = document.querySelector(
+  ".position button.btn-primary"
+);
 
 // Menambahkan event listener untuk meng-handle klik tombol "Save"
 savepositionButton.addEventListener("click", function () {
@@ -315,11 +317,13 @@ savepositionButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // delete-position
-const deletepositionButton = document.querySelector(".position button.btn-danger");
+const deletepositionButton = document.querySelector(
+  ".position button.btn-danger"
+);
 
 // Menambahkan event listener untuk meng-handle klik tombol "Delete"
 deletepositionButton.addEventListener("click", function () {
@@ -340,11 +344,13 @@ deletepositionButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // update-position
-const updatepositionButton = document.querySelector(".position button.btn-warning");
+const updatepositionButton = document.querySelector(
+  ".position button.btn-warning"
+);
 
 // Menambahkan event listener untuk meng-handle klik tombol "Update"
 updatepositionButton.addEventListener("click", function () {
@@ -365,7 +371,7 @@ updatepositionButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // add-article
@@ -390,11 +396,13 @@ savearticleButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // delete-article
-const deletearticleButton = document.querySelector(".article button.btn-danger");
+const deletearticleButton = document.querySelector(
+  ".article button.btn-danger"
+);
 
 // Menambahkan event listener untuk meng-handle klik tombol "Delete"
 deletearticleButton.addEventListener("click", function () {
@@ -415,11 +423,13 @@ deletearticleButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // update-article
-const updatearticleButton = document.querySelector(".article button.btn-warning");
+const updatearticleButton = document.querySelector(
+  ".article button.btn-warning"
+);
 
 // Menambahkan event listener untuk meng-handle klik tombol "Update"
 updatearticleButton.addEventListener("click", function () {
@@ -440,11 +450,13 @@ updatearticleButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // add-category
-const saveCategoryButton = document.querySelector(".category button.btn-primary");
+const saveCategoryButton = document.querySelector(
+  ".category button.btn-primary"
+);
 
 // Menambahkan event listener untuk meng-handle klik tombol "Save"
 saveCategoryButton.addEventListener("click", function () {
@@ -465,11 +477,13 @@ saveCategoryButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // delete-category
-const deleteCategoryButton = document.querySelector(".category button.btn-danger");
+const deleteCategoryButton = document.querySelector(
+  ".category button.btn-danger"
+);
 
 // Menambahkan event listener untuk meng-handle klik tombol "Delete"
 deleteCategoryButton.addEventListener("click", function () {
@@ -490,11 +504,13 @@ deleteCategoryButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // update-category
-const updateCategoryButton = document.querySelector(".category button.btn-warning");
+const updateCategoryButton = document.querySelector(
+  ".category button.btn-warning"
+);
 
 // Menambahkan event listener untuk meng-handle klik tombol "Update"
 updateCategoryButton.addEventListener("click", function () {
@@ -515,11 +531,13 @@ updateCategoryButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // add-sub-category
-const saveSubCategoryButton = document.querySelector(".sub-category button.btn-primary");
+const saveSubCategoryButton = document.querySelector(
+  ".sub-category button.btn-primary"
+);
 
 // Menambahkan event listener untuk meng-handle klik tombol "Save"
 saveSubCategoryButton.addEventListener("click", function () {
@@ -540,11 +558,13 @@ saveSubCategoryButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // delete-sub-category
-const deleteSubCategoryButton = document.querySelector(".sub-category button.btn-danger");
+const deleteSubCategoryButton = document.querySelector(
+  ".sub-category button.btn-danger"
+);
 
 // Menambahkan event listener untuk meng-handle klik tombol "Delete"
 deleteSubCategoryButton.addEventListener("click", function () {
@@ -565,11 +585,13 @@ deleteSubCategoryButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // update-sub-category
-const updateSubCategoryButton = document.querySelector(".sub-category button.btn-warning");
+const updateSubCategoryButton = document.querySelector(
+  ".sub-category button.btn-warning"
+);
 
 // Menambahkan event listener untuk meng-handle klik tombol "Update"
 updateSubCategoryButton.addEventListener("click", function () {
@@ -590,7 +612,7 @@ updateSubCategoryButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // add-size
@@ -615,7 +637,7 @@ saveSizeButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // delete-size
@@ -640,7 +662,7 @@ deleteSizeButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // update-size
@@ -665,7 +687,7 @@ updateSizeButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // add-color
@@ -690,7 +712,7 @@ saveColorButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // delete-color
@@ -715,7 +737,7 @@ deleteColorButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // update-color
@@ -740,7 +762,7 @@ updateColorButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // add-product
@@ -765,11 +787,13 @@ saveProductButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // delete-product
-const deleteProductButton = document.querySelector(".product button.btn-danger");
+const deleteProductButton = document.querySelector(
+  ".product button.btn-danger"
+);
 
 // Menambahkan event listener untuk meng-handle klik tombol "Delete"
 deleteProductButton.addEventListener("click", function () {
@@ -790,11 +814,13 @@ deleteProductButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // update-product
-const updateProductButton = document.querySelector(".product button.btn-warning");
+const updateProductButton = document.querySelector(
+  ".product button.btn-warning"
+);
 
 // Menambahkan event listener untuk meng-handle klik tombol "Update"
 updateProductButton.addEventListener("click", function () {
@@ -815,7 +841,7 @@ updateProductButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
 });
 
 // add-opname
@@ -840,5 +866,53 @@ saveopnameButton.addEventListener("click", function () {
   // Menghilangkan alert setelah 3 detik
   setTimeout(function () {
     $(".alert").alert("close");
-  }, 4000);
+  }, 1500);
+});
+
+// Menambahkan event listener untuk meng-handle klik tombol "Save"
+document
+  .getElementById("change-password-save")
+  .addEventListener("click", function () {
+    // Menampilkan alert warning
+    const alertWarning = `
+    <div class="alert alert-warning alert-dismissible bg-warning fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Password updated successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+    // Menambahkan alert warning ke dalam body
+    document.body.insertAdjacentHTML("beforeend", alertWarning);
+
+    // Menghilangkan alert setelah 3 detik
+    setTimeout(function () {
+      $(".alert").alert("close");
+    }, 1500);
+  });
+
+// update-profile-admin
+const updateProfileAdminButton = document.querySelector(
+  ".profile-admin button.btn-warning"
+);
+
+// Menambahkan event listener untuk meng-handle klik tombol "Update"
+updateProfileAdminButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#update-profile-admin-Modal").modal("hide");
+
+  // Menampilkan alert warning
+  const alertWarning = `
+    <div class="alert alert-warning alert-dismissible bg-warning fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data updated successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert warning ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertWarning);
+
+  // Menghilangkan alert setelah 1.5 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 1500);
 });
