@@ -742,3 +742,103 @@ updateColorButton.addEventListener("click", function () {
     $(".alert").alert("close");
   }, 4000);
 });
+
+// add-product
+const saveProductButton = document.querySelector(".product button.btn-primary");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Save"
+saveProductButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#add-product-Modal").modal("hide");
+
+  // Menampilkan alert success
+  const alertSuccess = `
+    <div class="alert alert-success alert-dismissible fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data saved successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert success ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertSuccess);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});
+
+// delete-product
+const deleteProductButton = document.querySelector(".product button.btn-danger");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Delete"
+deleteProductButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#delete-product-Modal").modal("hide");
+
+  // Menampilkan alert danger dengan latar belakang yang berbeda
+  const alertDanger = `
+    <div class="alert alert-danger alert-dismissible bg-danger fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data deleted successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert danger ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertDanger);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});
+
+// update-product
+const updateProductButton = document.querySelector(".product button.btn-warning");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Update"
+updateProductButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#update-product-Modal").modal("hide");
+
+  // Menampilkan alert warning
+  const alertWarning = `
+    <div class="alert alert-warning alert-dismissible bg-warning fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data updated successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert warning ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertWarning);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});
+
+// add-opname
+const saveopnameButton = document.querySelector(".opname button.btn-primary");
+
+// Menambahkan event listener untuk meng-handle klik tombol "Save"
+saveopnameButton.addEventListener("click", function () {
+  // Menutup modal
+  $("#add-opname-Modal").modal("hide");
+
+  // Menampilkan alert success
+  const alertSuccess = `
+    <div class="alert alert-success alert-dismissible fade show w-25 position-fixed top-0 start-50 translate-middle mt-5" role="alert">
+      Data saved successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Menambahkan alert success ke dalam body
+  document.body.insertAdjacentHTML("beforeend", alertSuccess);
+
+  // Menghilangkan alert setelah 3 detik
+  setTimeout(function () {
+    $(".alert").alert("close");
+  }, 4000);
+});
