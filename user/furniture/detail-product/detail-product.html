@@ -52,7 +52,12 @@
             <ul class="navbar-nav mb-2 mb-lg-0 fs-6 fw-bold">
               <!-- home nav -->
               <li class="nav-item">
-                <a class="nav-link me-2" aria-current="page" href="../dashboard-customer.html">HOME</a>
+                <a
+                  class="nav-link me-2"
+                  aria-current="page"
+                  href="../dashboard-customer.html"
+                  >HOME</a
+                >
               </li>
               <!-- home nav -->
               <!-- catalog nav -->
@@ -111,13 +116,19 @@
               <!-- shopping-cart nav -->
               <li class="nav-item">
                 <a
-                  class="nav-link"
+                  class="nav-link position-relative"
                   type="button"
                   data-bs-toggle="offcanvas"
                   data-bs-target="#offcanvasRight"
                   aria-controls="offcanvasRight"
                 >
-                  <i class="fa-solid fa-cart-shopping"></i>
+                  <i class="fa-solid fa-cart-shopping"
+                    ><span
+                      class="badge bg-secondary position-absolute top-0 start-100 translate-middle bg-danger border border-light rounded-circle mt-3"
+                      style="font-size: 0.8rem"
+                      >0</span
+                    ></i
+                  >
                 </a>
 
                 <div
@@ -127,7 +138,7 @@
                   aria-labelledby="offcanvasRightLabel"
                 >
                   <div class="offcanvas-header">
-                    <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+                    <h1 id="offcanvasRightLabel">My Chart</h1>
                     <button
                       type="button"
                       class="btn-close text-reset"
@@ -135,7 +146,67 @@
                       aria-label="Close"
                     ></button>
                   </div>
-                  <div class="offcanvas-body">...</div>
+                  <div class="offcanvas-body">
+                    <div class="">
+                      <div class="row">
+                        <div class="col-6">
+                          <img
+                            class="img-fluid"
+                            src="../../../assets/img/product/catalog/furniture/living-chair/living-chair1.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="col-6">
+                          <h4>Living Chair 1</h4>
+                          <p class="fs-6 fw-normal">FLC-001</p>
+                          <span class="product-cart fs-6 fw-normal mt-0"></span>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-5">
+                          <h5 class="fw-bold mt-3">
+                            Rp. <span id="price-start">4000000</span>,-
+                          </h5>
+                        </div>
+                        <div class="col-7">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                          >
+                            <button
+                              id="decrement-btn"
+                              class="btn btn-secondary px-4"
+                            >
+                              -
+                            </button>
+                            <span id="counter-span" class="mx-3">1</span>
+                            <button
+                              id="increment-btn"
+                              class="btn btn-secondary px-4"
+                            >
+                              +
+                            </button>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6 mt-3">
+                            <h5 class="fw-bold">
+                              Total Price: <br />
+                              Rp. <span id="total-price">4000000</span>,-
+                            </h5>
+                          </div>
+                          <div class="col-6">
+                            <a
+                              href="../payment.html"
+                              type="button"
+                              class="btn btn-warning w-100 mt-3"
+                            >
+                              Checkout
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <!-- shopping-cart nav -->
@@ -172,108 +243,108 @@
       <!-- navbar -->
       <!-- catalog content -->
       <div class="container-fluid w-100 vh-100 py-5">
-        <div class="row mt-5 justify-content-center gap-3">
-          <div class="col-5 p-3">
-            <div class="row" id="main-img">
-              <img
-                class="img-fluid"
-                src="../../../assets/img/product/catalog/furniture/living-chair/living-chair1.jpg"
-                alt=""
-                id="main-image"
-              />
-            </div>
-            <div class="row mt-4 d-flex">
-              <div class="col-3">
-                <a href="#" onclick="changeImage('img-v1')">
-                  <img
-                    class="img-fluid"
-                    src="../../../assets/img/product/catalog/furniture/living-chair/living-chair1.jpg"
-                    alt=""
-                    id="img-v1"
-                  />
-                </a>
+        <form>
+          <div class="row mt-5 justify-content-center gap-3">
+            <div class="col-5 p-3">
+              <div class="row" id="main-img">
+                <img
+                  class="img-fluid"
+                  src="../../../assets/img/product/catalog/furniture/living-chair/living-chair1.jpg"
+                  alt=""
+                  id="main-image"
+                />
               </div>
-              <div class="col-3">
-                <a href="#" onclick="changeImage('img-v2')">
-                  <img
-                    class="img-fluid"
-                    src="../../../assets/img/product/catalog/furniture/living-chair/living-chair2.jpg"
-                    alt=""
-                    id="img-v2"
-                  />
-                </a>
-              </div>
-              <div class="col-3">
-                <a href="#" onclick="changeImage('img-v3')">
-                  <img
-                    class="img-fluid"
-                    src="../../../assets/img/product/catalog/furniture/living-chair/living-chair3.jpg"
-                    alt=""
-                    id="img-v3"
-                  />
-                </a>
-              </div>
-              <div class="col-3">
-                <a href="#" onclick="changeImage('img-v4')">
-                  <img
-                    class="img-fluid"
-                    src="../../../assets/img/product/catalog/furniture/living-chair/living-chair4.jpg"
-                    alt=""
-                    id="img-v4"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-5 p-3">
-            <div class="row border-bottom">
-              <h2><strong>Living Chair 1</strong></h2>
-              <p><strong>Item No : </strong> FLC-001</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                necessitatibus saepe, officia libero incidunt dignissimos
-                corporis vero ab unde placeat.
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dolores deserunt natus totam consequatur voluptates ullam
-                officiis amet distinctio voluptate magnam.
-              </p>
-              <p>Room Size : 2m x 2m.</p>
-            </div>
-            <div class="row mt-3">
-              <div class="col-6">
-                <h4 class="mt-1"><strong>Rp. 4.599.999,- / Set</strong></h4>
-                <h4 class="mt-5"><strong>Rp. 9.199.998</strong></h4>
-              </div>
-              <div class="col-6 d-flex flex-column justify-content-center">
-                <div class="col-12 d-flex justify-content-center gap-4 mb-3">
-                  <a
-                    href=""
-                    class="btn btn-light d-inline-block"
-                    style="width: 4rem"
-                    >-</a
-                  >
-                  <a
-                    href=""
-                    class="btn btn-light d-inline-block"
-                    style="width: 4rem"
-                    >2</a
-                  >
-                  <a
-                    href=""
-                    class="btn btn-light d-inline-block"
-                    style="width: 4rem"
-                    >+</a
-                  >
+              <div class="row mt-4 d-flex">
+                <div class="col-3">
+                  <a href="#" onclick="changeImage('img-v1')">
+                    <img
+                      class="img-fluid"
+                      src="../../../assets/img/product/catalog/furniture/living-chair/living-chair1.jpg"
+                      alt=""
+                      id="img-v1"
+                    />
+                  </a>
                 </div>
-                <a href="../auth/furniture/login.html" class="btn btn-light"
-                  >Login to Order</a
-                >
+                <div class="col-3">
+                  <a href="#" onclick="changeImage('img-v2')">
+                    <img
+                      class="img-fluid"
+                      src="../../../assets/img/product/catalog/furniture/living-chair/living-chair2.jpg"
+                      alt=""
+                      id="img-v2"
+                    />
+                  </a>
+                </div>
+                <div class="col-3">
+                  <a href="#" onclick="changeImage('img-v3')">
+                    <img
+                      class="img-fluid"
+                      src="../../../assets/img/product/catalog/furniture/living-chair/living-chair3.jpg"
+                      alt=""
+                      id="img-v3"
+                    />
+                  </a>
+                </div>
+                <div class="col-3">
+                  <a href="#" onclick="changeImage('img-v4')">
+                    <img
+                      class="img-fluid"
+                      src="../../../assets/img/product/catalog/furniture/living-chair/living-chair4.jpg"
+                      alt=""
+                      id="img-v4"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
+            <div class="col-5 p-3">
+              <div class="row border-bottom">
+                <h2 id="product-name"><strong>Living Chair 1</strong></h2>
+                <p id="product-code"><strong>Item No : </strong> FLC-001</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolorem necessitatibus saepe, officia libero incidunt
+                  dignissimos corporis vero ab unde placeat.
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Dolores deserunt natus totam consequatur voluptates ullam
+                  officiis amet distinctio voluptate magnam.
+                </p>
+                <h2 id="product-price">
+                  <strong>Rp. <span>4000000</span>,-/set</strong>
+                </h2>
+              </div>
+              <div class="row mt-2">
+                <div class="col-6">
+                  <div class="mb-3">
+                    <select id="selectSize" class="form-select p-3">
+                      <option selected>Select Size</option>
+                      <option value="1">S (2m x 2m)</option>
+                      <option value="2">M (3m x 2m)</option>
+                      <option value="3">L (4m x 3m)</option>
+                      <option value="4">XL (4m x 4m)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <select id="selectColor" class="form-select p-3">
+                      <option selected>Select Color</option>
+                      <option value="1">Varian 1</option>
+                      <option value="2">Varian 2</option>
+                      <option value="3">Varian 3</option>
+                      <option value="4">Varian 4</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-secondary w-100">
+                Add to cart
+              </button>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
       <!-- catalog content -->
     </section>
@@ -427,7 +498,11 @@
                         <a href="" class="text-decoration-none">Ben</a>
                       </li>
                       <li class="m-2">
-                        <a href="../catalog/living-chair.html" class="text-decoration-none">Living Chair</a>
+                        <a
+                          href="../catalog/living-chair.html"
+                          class="text-decoration-none"
+                          >Living Chair</a
+                        >
                       </li>
                       <li class="m-2">
                         <a href="" class="text-decoration-none">Dining Chair</a>
@@ -533,6 +608,74 @@
         // Ubah sumber gambar utama sesuai dengan sumber gambar miniatur yang diklik
         mainImage.src = clickedImage.src;
       }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          addToCart();
+        });
+
+        function addToCart() {
+          const selectSize = document.getElementById("selectSize");
+          const selectColor = document.getElementById("selectColor");
+
+          const sizeValue = selectSize.options[selectSize.selectedIndex].text;
+          const colorValue =
+            selectColor.options[selectColor.selectedIndex].text;
+
+          const product = `${sizeValue} - ${colorValue}`;
+          updateCart(product);
+        }
+
+        function updateCart(product) {
+          const productCart = document.querySelector(".product-cart");
+          const newProductItem = document.createElement("div");
+          newProductItem.classList.add("mb-2");
+          newProductItem.textContent = product;
+          productCart.appendChild(newProductItem);
+
+          // Update badge count
+          const badge = document.querySelector(".badge");
+          const currentCount = parseInt(badge.textContent) || 0;
+          badge.textContent = currentCount + 1;
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const counterSpan = document.getElementById("counter-span");
+        const incrementBtn = document.getElementById("increment-btn");
+        const decrementBtn = document.getElementById("decrement-btn");
+        const priceStartSpan = document.getElementById("price-start");
+
+        let counter = 1;
+
+        incrementBtn.addEventListener("click", function () {
+          counter++;
+          updateCounter();
+        });
+
+        decrementBtn.addEventListener("click", function () {
+          if (counter > 1) {
+            counter--;
+            updateCounter();
+          }
+        });
+
+        function updateCounter() {
+          counterSpan.innerText = counter;
+          updateTotalPrice();
+        }
+
+        function updateTotalPrice() {
+          const priceStart = parseInt(priceStartSpan.innerText);
+          const totalPrice = counter * priceStart;
+          document.getElementById("total-price").innerText =
+            totalPrice.toLocaleString("id-ID");
+        }
+      });
     </script>
   </body>
 </html>
